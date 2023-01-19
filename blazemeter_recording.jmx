@@ -1,0 +1,2372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.5">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="blazemeter_recording" enabled="true">
+      <stringProp name="TestPlan.comments">This test plan was created by the BlazeMeter converter v.3.1.23. Please contact support@blazemeter.com for further support.</stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+        <collectionProp name="HeaderManager.headers">
+          <elementProp name="sec-ch-ua" elementType="Header">
+            <stringProp name="Header.name">sec-ch-ua</stringProp>
+            <stringProp name="Header.value">&quot;Not?A_Brand&quot;;v=&quot;8&quot;, &quot;Chromium&quot;;v=&quot;108&quot;, &quot;Google Chrome&quot;;v=&quot;108&quot;</stringProp>
+          </elementProp>
+          <elementProp name="sec-ch-ua-mobile" elementType="Header">
+            <stringProp name="Header.name">sec-ch-ua-mobile</stringProp>
+            <stringProp name="Header.value">?0</stringProp>
+          </elementProp>
+          <elementProp name="sec-ch-ua-platform" elementType="Header">
+            <stringProp name="Header.name">sec-ch-ua-platform</stringProp>
+            <stringProp name="Header.value">&quot;Windows&quot;</stringProp>
+          </elementProp>
+          <elementProp name="User-Agent" elementType="Header">
+            <stringProp name="Header.name">User-Agent</stringProp>
+            <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36</stringProp>
+          </elementProp>
+        </collectionProp>
+      </HeaderManager>
+      <hashTree/>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="BASE_URL_1" elementType="Argument">
+            <stringProp name="Argument.name">BASE_URL_1</stringProp>
+            <stringProp name="Argument.value">www.walmart.com</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="BASE_URL_2" elementType="Argument">
+            <stringProp name="Argument.name">BASE_URL_2</stringProp>
+            <stringProp name="Argument.value">beacon.walmart.com</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+      <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults" enabled="true">
+        <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+          <collectionProp name="Arguments.arguments"/>
+        </elementProp>
+        <stringProp name="HTTPSampler.domain"></stringProp>
+        <stringProp name="HTTPSampler.port"></stringProp>
+        <stringProp name="HTTPSampler.protocol"></stringProp>
+        <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+        <stringProp name="HTTPSampler.path"></stringProp>
+        <boolProp name="HTTPSampler.image_parser">true</boolProp>
+        <boolProp name="HTTPSampler.concurrentDwn">true</boolProp>
+        <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+        <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+        <stringProp name="HTTPSampler.response_timeout"></stringProp>
+      </ConfigTestElement>
+      <hashTree/>
+      <DNSCacheManager guiclass="DNSCachePanel" testclass="DNSCacheManager" testname="DNS Cache Manager" enabled="true">
+        <collectionProp name="DNSCacheManager.servers"/>
+        <boolProp name="DNSCacheManager.clearEachIteration">true</boolProp>
+        <boolProp name="DNSCacheManager.isCustomResolver">false</boolProp>
+      </DNSCacheManager>
+      <hashTree/>
+      <AuthManager guiclass="AuthPanel" testclass="AuthManager" testname="HTTP Authorization Manager" enabled="true">
+        <collectionProp name="AuthManager.auth_list"/>
+        <boolProp name="AuthManager.controlledByThreadGroup">false</boolProp>
+      </AuthManager>
+      <hashTree/>
+      <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie Manager" enabled="true">
+        <collectionProp name="CookieManager.cookies"/>
+        <boolProp name="CookieManager.clearEachIteration">true</boolProp>
+        <boolProp name="CookieManager.controlledByThreadGroup">false</boolProp>
+      </CookieManager>
+      <hashTree/>
+      <CacheManager guiclass="CacheManagerGui" testclass="CacheManager" testname="HTTP Cache Manager" enabled="true">
+        <boolProp name="clearEachIteration">true</boolProp>
+        <boolProp name="useExpires">false</boolProp>
+        <boolProp name="CacheManager.controlledByThread">false</boolProp>
+      </CacheManager>
+      <hashTree/>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration">0</stringProp>
+        <stringProp name="ThreadGroup.delay">0</stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Test" enabled="true">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+          <boolProp name="TransactionController.parent">false</boolProp>
+        </TransactionController>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://www.walmart.com/cp/electronics/3944" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">cp/electronics/3944</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+                  <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Uniform Random Timer" enabled="true">
+              <stringProp name="RandomTimer.range">0.0</stringProp>
+              <stringProp name="ConstantTimer.delay">0</stringProp>
+              <stringProp name="TestPlan.comments">Recorded time was 0 milliseconds</stringProp>
+            </UniformRandomTimer>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://www.walmart.com/orchestra/cartxo/graphql/MergeAndGetCart/ca2914c9685427a16abececcb3825e216518bb8bebe7b1321e96da1b65090d28" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;variables&quot;:{&quot;input&quot;:{&quot;cartId&quot;:null,&quot;strategy&quot;:&quot;MERGE&quot;,&quot;enableLiquorBox&quot;:true},&quot;includeImageAndName&quot;:false,&quot;detailed&quot;:false,&quot;includePartialFulfillmentSwitching&quot;:false,&quot;enableAEBadge&quot;:false,&quot;enableBadges&quot;:false,&quot;includeQueueing&quot;:false,&quot;includeExpressSla&quot;:true,&quot;enableACCScheduling&quot;:true,&quot;includeWeeklyReservation&quot;:true,&quot;enableWalmartPlusFreeDiscountedExpress&quot;:true,&quot;enableWalmartPlusFreeDiscountedExpressProgram&quot;:false,&quot;enableWplusCashback&quot;:false,&quot;enableCartBookslotShortcut&quot;:false,&quot;enableFutureInventoryCartBookslot&quot;:false,&quot;enableWeightedItems&quot;:false,&quot;includeOtherDetailed&quot;:true,&quot;enableExpressReservationEndTime&quot;:false,&quot;enableCartLevelMSI&quot;:false,&quot;enableIntentControl&quot;:false,&quot;enableReturnsLabel&quot;:false,&quot;enableStarRatings&quot;:false,&quot;enableBenefitSavings&quot;:false,&quot;includeGrandAndSavedSubtotal&quot;:false,&quot;enablePickupNotAvailable&quot;:false}}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">orchestra/cartxo/graphql/MergeAndGetCart/ca2914c9685427a16abececcb3825e216518bb8bebe7b1321e96da1b65090d28</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="x-o-correlation-id" elementType="Header">
+                  <stringProp name="Header.name">x-o-correlation-id</stringProp>
+                  <stringProp name="Header.value">QpUW1CQ9KEVgrW-vARApVPjJD_z3XJThf0Lo</stringProp>
+                </elementProp>
+                <elementProp name="DEVICE_PROFILE_REF_ID" elementType="Header">
+                  <stringProp name="Header.name">DEVICE_PROFILE_REF_ID</stringProp>
+                  <stringProp name="Header.value">0aVxcQKx9tWIDczaeAQNKCQobFrEX58sgI1n</stringProp>
+                </elementProp>
+                <elementProp name="x-latency-trace" elementType="Header">
+                  <stringProp name="Header.name">x-latency-trace</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="WM_MP" elementType="Header">
+                  <stringProp name="Header.name">WM_MP</stringProp>
+                  <stringProp name="Header.value">true</stringProp>
+                </elementProp>
+                <elementProp name="x-o-platform-version" elementType="Header">
+                  <stringProp name="Header.name">x-o-platform-version</stringProp>
+                  <stringProp name="Header.value">main-1.36.0-19e8b5-0108T0618</stringProp>
+                </elementProp>
+                <elementProp name="x-o-gql-query" elementType="Header">
+                  <stringProp name="Header.name">x-o-gql-query</stringProp>
+                  <stringProp name="Header.value">mutation MergeAndGetCart</stringProp>
+                </elementProp>
+                <elementProp name="WM_PAGE_URL" elementType="Header">
+                  <stringProp name="Header.name">WM_PAGE_URL</stringProp>
+                  <stringProp name="Header.value">https://www.walmart.com/cp/electronics/3944</stringProp>
+                </elementProp>
+                <elementProp name="X-APOLLO-OPERATION-NAME" elementType="Header">
+                  <stringProp name="Header.name">X-APOLLO-OPERATION-NAME</stringProp>
+                  <stringProp name="Header.value">MergeAndGetCart</stringProp>
+                </elementProp>
+                <elementProp name="x-o-bu" elementType="Header">
+                  <stringProp name="Header.name">x-o-bu</stringProp>
+                  <stringProp name="Header.value">WALMART-US</stringProp>
+                </elementProp>
+                <elementProp name="traceparent" elementType="Header">
+                  <stringProp name="Header.name">traceparent</stringProp>
+                  <stringProp name="Header.value">00-1bcaba969fdf8456a6b3cb58a815d138-6a06577bd03437a5-00</stringProp>
+                </elementProp>
+                <elementProp name="x-o-mart" elementType="Header">
+                  <stringProp name="Header.name">x-o-mart</stringProp>
+                  <stringProp name="Header.value">B2C</stringProp>
+                </elementProp>
+                <elementProp name="x-o-platform" elementType="Header">
+                  <stringProp name="Header.name">x-o-platform</stringProp>
+                  <stringProp name="Header.value">rweb</stringProp>
+                </elementProp>
+                <elementProp name="x-o-segment" elementType="Header">
+                  <stringProp name="Header.name">x-o-segment</stringProp>
+                  <stringProp name="Header.value">oaoh</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="accept" elementType="Header">
+                  <stringProp name="Header.name">accept</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="x-enable-server-timing" elementType="Header">
+                  <stringProp name="Header.name">x-enable-server-timing</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="x-o-ccm" elementType="Header">
+                  <stringProp name="Header.name">x-o-ccm</stringProp>
+                  <stringProp name="Header.value">server</stringProp>
+                </elementProp>
+                <elementProp name="wm_qos.correlation_id" elementType="Header">
+                  <stringProp name="Header.name">wm_qos.correlation_id</stringProp>
+                  <stringProp name="Header.value">QpUW1CQ9KEVgrW-vARApVPjJD_z3XJThf0Lo</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://www.walmart.com/orchestra/home/graphql/GlobalIntentCenter/f58a26a57471c47f318bd8c9e71b385e892dfa9aa20b58f5c7bc52d8f3018689?variables=%7B%22fetchNavLinks%22%3Atrue%2C%22pageType%22%3A%22GlobalIntentCenterPage%22%7D" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="variables" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">variables</stringProp>
+                  <stringProp name="Argument.value">{&quot;fetchNavLinks&quot;:true,&quot;pageType&quot;:&quot;GlobalIntentCenterPage&quot;}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">orchestra/home/graphql/GlobalIntentCenter/f58a26a57471c47f318bd8c9e71b385e892dfa9aa20b58f5c7bc52d8f3018689</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="x-o-correlation-id" elementType="Header">
+                  <stringProp name="Header.name">x-o-correlation-id</stringProp>
+                  <stringProp name="Header.value">gq4FZo8sAopLjb5wFCvwFizxHYmhe30sqWPv</stringProp>
+                </elementProp>
+                <elementProp name="DEVICE_PROFILE_REF_ID" elementType="Header">
+                  <stringProp name="Header.name">DEVICE_PROFILE_REF_ID</stringProp>
+                  <stringProp name="Header.value">0aVxcQKx9tWIDczaeAQNKCQobFrEX58sgI1n</stringProp>
+                </elementProp>
+                <elementProp name="x-latency-trace" elementType="Header">
+                  <stringProp name="Header.name">x-latency-trace</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="WM_MP" elementType="Header">
+                  <stringProp name="Header.name">WM_MP</stringProp>
+                  <stringProp name="Header.value">true</stringProp>
+                </elementProp>
+                <elementProp name="x-o-platform-version" elementType="Header">
+                  <stringProp name="Header.name">x-o-platform-version</stringProp>
+                  <stringProp name="Header.value">main-1.36.0-19e8b5-0108T0618</stringProp>
+                </elementProp>
+                <elementProp name="x-o-gql-query" elementType="Header">
+                  <stringProp name="Header.name">x-o-gql-query</stringProp>
+                  <stringProp name="Header.value">query GlobalIntentCenter</stringProp>
+                </elementProp>
+                <elementProp name="WM_PAGE_URL" elementType="Header">
+                  <stringProp name="Header.name">WM_PAGE_URL</stringProp>
+                  <stringProp name="Header.value">https://www.walmart.com/cp/electronics/3944</stringProp>
+                </elementProp>
+                <elementProp name="X-APOLLO-OPERATION-NAME" elementType="Header">
+                  <stringProp name="Header.name">X-APOLLO-OPERATION-NAME</stringProp>
+                  <stringProp name="Header.value">GlobalIntentCenter</stringProp>
+                </elementProp>
+                <elementProp name="x-o-bu" elementType="Header">
+                  <stringProp name="Header.name">x-o-bu</stringProp>
+                  <stringProp name="Header.value">WALMART-US</stringProp>
+                </elementProp>
+                <elementProp name="traceparent" elementType="Header">
+                  <stringProp name="Header.name">traceparent</stringProp>
+                  <stringProp name="Header.value">00-2a1830e0e85d1d715607c4a2e82f07ec-1a9dfed7f5eb46e3-00</stringProp>
+                </elementProp>
+                <elementProp name="x-o-mart" elementType="Header">
+                  <stringProp name="Header.name">x-o-mart</stringProp>
+                  <stringProp name="Header.value">B2C</stringProp>
+                </elementProp>
+                <elementProp name="x-o-platform" elementType="Header">
+                  <stringProp name="Header.name">x-o-platform</stringProp>
+                  <stringProp name="Header.value">rweb</stringProp>
+                </elementProp>
+                <elementProp name="x-o-segment" elementType="Header">
+                  <stringProp name="Header.name">x-o-segment</stringProp>
+                  <stringProp name="Header.value">oaoh</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="accept" elementType="Header">
+                  <stringProp name="Header.name">accept</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="x-enable-server-timing" elementType="Header">
+                  <stringProp name="Header.name">x-enable-server-timing</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="x-o-ccm" elementType="Header">
+                  <stringProp name="Header.name">x-o-ccm</stringProp>
+                  <stringProp name="Header.value">server</stringProp>
+                </elementProp>
+                <elementProp name="wm_qos.correlation_id" elementType="Header">
+                  <stringProp name="Header.name">wm_qos.correlation_id</stringProp>
+                  <stringProp name="Header.value">gq4FZo8sAopLjb5wFCvwFizxHYmhe30sqWPv</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://www.walmart.com/orchestra/snb/graphql/Deals/aa01038223dc8d4319131d5359a556b050ce3e198dc96dff4fcc9312ba308eeb/deals?variables=%7B%22id%22%3A%22%22%2C%22dealsId%22%3A%22deals%2Felectronics%2Fnew-year-new-tech%22%2C%22page%22%3A1%2C%22prg%22%3A%22desktop%22%2C%22facet%22%3A%22%22%2C%22catId%22%3A%22%22%2C%22seoPath%22%3A%22%2Fshop%2Fdeals%2Felectronics%2Fnew-year-new-tech%22%2C%22ps%22%3A40%2C%22ptss%22%3A%22%22%2C%22trsp%22%3A%22%22%2C%22min_price%22%3A%22%22%2C%22max_price%22%3A%22%22%2C%22sort%22%3A%22best_match%22%2C%22beShelfId%22%3A%22%22%2C%22recall_set%22%3A%22%22%2C%22module_search%22%3A%22%22%2C%22storeSlotBooked%22%3A%22%22%2C%22additionalQueryParams%22%3A%7B%22isMoreOptionsTileEnabled%22%3Atrue%7D%2C%22searchParams%22%3A%7B%22id%22%3A%22%22%2C%22dealsId%22%3A%22deals%2Felectronics%2Fnew-year-new-tech%22%2C%22query%22%3A%22%22%2C%22page%22%3A1%2C%22prg%22%3A%22desktop%22%2C%22facet%22%3A%22%22%2C%22catId%22%3A%22%22%2C%22seoPath%22%3A%22%2Fshop%2Fdeals%2Felectronics%2Fnew-year-new-tech%22%2C%22ps%22%3A40%2C%22ptss%22%3A%22%22%2C%22trsp%22%3A%22%22%2C%22min_price%22%3A%22%22%2C%22max_price%22%3A%22%22%2C%22sort%22%3A%22best_match%22%2C%22beShelfId%22%3A%22%22%2C%22recall_set%22%3A%22%22%2C%22module_search%22%3A%22%22%2C%22storeSlotBooked%22%3A%22%22%2C%22additionalQueryParams%22%3A%7B%22isMoreOptionsTileEnabled%22%3Atrue%7D%2C%22cat_id%22%3A%22%22%2C%22_be_shelf_id%22%3A%22%22%2C%22pageType%22%3A%22DealsPage%22%7D%2C%22query%22%3Anull%2C%22pageType%22%3A%22DealsPage%22%2C%22fetchSkyline%22%3Afalse%2C%22enablePortableFacets%22%3Atrue%2C%22enableFacetCount%22%3Atrue%7D" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="variables" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">variables</stringProp>
+                  <stringProp name="Argument.value">{&quot;id&quot;:&quot;&quot;,&quot;dealsId&quot;:&quot;deals/electronics/new-year-new-tech&quot;,&quot;page&quot;:1,&quot;prg&quot;:&quot;desktop&quot;,&quot;facet&quot;:&quot;&quot;,&quot;catId&quot;:&quot;&quot;,&quot;seoPath&quot;:&quot;/shop/deals/electronics/new-year-new-tech&quot;,&quot;ps&quot;:40,&quot;ptss&quot;:&quot;&quot;,&quot;trsp&quot;:&quot;&quot;,&quot;min_price&quot;:&quot;&quot;,&quot;max_price&quot;:&quot;&quot;,&quot;sort&quot;:&quot;best_match&quot;,&quot;beShelfId&quot;:&quot;&quot;,&quot;recall_set&quot;:&quot;&quot;,&quot;module_search&quot;:&quot;&quot;,&quot;storeSlotBooked&quot;:&quot;&quot;,&quot;additionalQueryParams&quot;:{&quot;isMoreOptionsTileEnabled&quot;:true},&quot;searchParams&quot;:{&quot;id&quot;:&quot;&quot;,&quot;dealsId&quot;:&quot;deals/electronics/new-year-new-tech&quot;,&quot;query&quot;:&quot;&quot;,&quot;page&quot;:1,&quot;prg&quot;:&quot;desktop&quot;,&quot;facet&quot;:&quot;&quot;,&quot;catId&quot;:&quot;&quot;,&quot;seoPath&quot;:&quot;/shop/deals/electronics/new-year-new-tech&quot;,&quot;ps&quot;:40,&quot;ptss&quot;:&quot;&quot;,&quot;trsp&quot;:&quot;&quot;,&quot;min_price&quot;:&quot;&quot;,&quot;max_price&quot;:&quot;&quot;,&quot;sort&quot;:&quot;best_match&quot;,&quot;beShelfId&quot;:&quot;&quot;,&quot;recall_set&quot;:&quot;&quot;,&quot;module_search&quot;:&quot;&quot;,&quot;storeSlotBooked&quot;:&quot;&quot;,&quot;additionalQueryParams&quot;:{&quot;isMoreOptionsTileEnabled&quot;:true},&quot;cat_id&quot;:&quot;&quot;,&quot;_be_shelf_id&quot;:&quot;&quot;,&quot;pageType&quot;:&quot;DealsPage&quot;},&quot;query&quot;:null,&quot;pageType&quot;:&quot;DealsPage&quot;,&quot;fetchSkyline&quot;:false,&quot;enablePortableFacets&quot;:true,&quot;enableFacetCount&quot;:true}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">orchestra/snb/graphql/Deals/aa01038223dc8d4319131d5359a556b050ce3e198dc96dff4fcc9312ba308eeb/deals</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="x-o-correlation-id" elementType="Header">
+                  <stringProp name="Header.name">x-o-correlation-id</stringProp>
+                  <stringProp name="Header.value">3jhy9eqY2I2eTpWKofZRCH5og8_ovZy6gzHR</stringProp>
+                </elementProp>
+                <elementProp name="DEVICE_PROFILE_REF_ID" elementType="Header">
+                  <stringProp name="Header.name">DEVICE_PROFILE_REF_ID</stringProp>
+                  <stringProp name="Header.value">0aVxcQKx9tWIDczaeAQNKCQobFrEX58sgI1n</stringProp>
+                </elementProp>
+                <elementProp name="x-latency-trace" elementType="Header">
+                  <stringProp name="Header.name">x-latency-trace</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="WM_MP" elementType="Header">
+                  <stringProp name="Header.name">WM_MP</stringProp>
+                  <stringProp name="Header.value">true</stringProp>
+                </elementProp>
+                <elementProp name="x-o-platform-version" elementType="Header">
+                  <stringProp name="Header.name">x-o-platform-version</stringProp>
+                  <stringProp name="Header.value">main-1.36.0-19e8b5-0108T0618</stringProp>
+                </elementProp>
+                <elementProp name="x-o-gql-query" elementType="Header">
+                  <stringProp name="Header.name">x-o-gql-query</stringProp>
+                  <stringProp name="Header.value">query Deals</stringProp>
+                </elementProp>
+                <elementProp name="WM_PAGE_URL" elementType="Header">
+                  <stringProp name="Header.name">WM_PAGE_URL</stringProp>
+                  <stringProp name="Header.value">https://www.walmart.com/shop/deals/electronics/new-year-new-tech</stringProp>
+                </elementProp>
+                <elementProp name="X-APOLLO-OPERATION-NAME" elementType="Header">
+                  <stringProp name="Header.name">X-APOLLO-OPERATION-NAME</stringProp>
+                  <stringProp name="Header.value">Deals</stringProp>
+                </elementProp>
+                <elementProp name="x-o-bu" elementType="Header">
+                  <stringProp name="Header.name">x-o-bu</stringProp>
+                  <stringProp name="Header.value">WALMART-US</stringProp>
+                </elementProp>
+                <elementProp name="traceparent" elementType="Header">
+                  <stringProp name="Header.name">traceparent</stringProp>
+                  <stringProp name="Header.value">00-3da33039f029ad8ffeebbd414d7a6d99-c0fa29021bb77631-00</stringProp>
+                </elementProp>
+                <elementProp name="x-o-mart" elementType="Header">
+                  <stringProp name="Header.name">x-o-mart</stringProp>
+                  <stringProp name="Header.value">B2C</stringProp>
+                </elementProp>
+                <elementProp name="x-o-platform" elementType="Header">
+                  <stringProp name="Header.name">x-o-platform</stringProp>
+                  <stringProp name="Header.value">rweb</stringProp>
+                </elementProp>
+                <elementProp name="x-o-segment" elementType="Header">
+                  <stringProp name="Header.name">x-o-segment</stringProp>
+                  <stringProp name="Header.value">oaoh</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="accept" elementType="Header">
+                  <stringProp name="Header.name">accept</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="x-enable-server-timing" elementType="Header">
+                  <stringProp name="Header.name">x-enable-server-timing</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="x-o-ccm" elementType="Header">
+                  <stringProp name="Header.name">x-o-ccm</stringProp>
+                  <stringProp name="Header.value">server</stringProp>
+                </elementProp>
+                <elementProp name="wm_qos.correlation_id" elementType="Header">
+                  <stringProp name="Header.name">wm_qos.correlation_id</stringProp>
+                  <stringProp name="Header.value">3jhy9eqY2I2eTpWKofZRCH5og8_ovZy6gzHR</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://www.walmart.com/shop/deals/electronics/new-year-new-tech" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">shop/deals/electronics/new-year-new-tech</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Synthetic-Request-For-Logging" elementType="Header">
+                  <stringProp name="Header.name">Synthetic-Request-For-Logging</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://beacon.walmart.com/rum.gif" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="bts" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">bts</stringProp>
+                  <stringProp name="Argument.value">1673383346608</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="sv" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">sv</stringProp>
+                  <stringProp name="Argument.value">1.1.90</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="oldBatch" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">oldBatch</stringProp>
+                  <stringProp name="Argument.value">false</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="av" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">av</stringProp>
+                  <stringProp name="Argument.value">v0</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="el" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">el</stringProp>
+                  <stringProp name="Argument.value">[{&quot;msg&quot;:{&quot;tags&quot;:[&quot;info&quot;,&quot;search&quot;,&quot;oosInfo&quot;],&quot;isomorphicSessionId&quot;:&quot;EQIrgJ7ZvEl0FpAd9QHrB&quot;,&quot;datacenter&quot;:&quot;eus2&quot;,&quot;oosValue&quot;:&quot;IN_STOCK&quot;,&quot;oosDisplay&quot;:&quot;In stock&quot;,&quot;usItemId&quot;:&quot;1409908132&quot;},&quot;ta&quot;:{&quot;pt&quot;:&quot;walmartWeb&quot;},&quot;pg&quot;:{&quot;nm&quot;:&quot;walmartWeb&quot;},&quot;r&quot;:&quot;https://www.walmart.com/cp/electronics/3944&quot;,&quot;cd&quot;:{&quot;dim&quot;:{&quot;vw&quot;:1263,&quot;vh&quot;:577,&quot;sw&quot;:1280,&quot;sh&quot;:720,&quot;iw&quot;:1280,&quot;ih&quot;:577}},&quot;ts&quot;:1673383346546,&quot;pv_id&quot;:&quot;5a0362fc-44f8-4c33-88f6-811d44c45a5a&quot;,&quot;bn&quot;:56,&quot;act&quot;:&quot;log&quot;,&quot;ctx&quot;:&quot;walmartWeb&quot;,&quot;name&quot;:&quot;wcnp_walmart-web-search&quot;,&quot;u&quot;:&quot;https://www.walmart.com/shop/deals/electronics/new-year-new-tech&quot;,&quot;la&quot;:&quot;en&quot;,&quot;opv_id&quot;:&quot;08597430-dc09-4fa2-86d6-9511e944d261&quot;,&quot;_apv&quot;:&quot;main-1.36.0-19e8b5-0108T0618&quot;,&quot;_dc&quot;:&quot;eus2&quot;,&quot;rpv_id&quot;:&quot;08597430-dc09-4fa2-86d6-9511e944d261&quot;,&quot;hc&quot;:2075559164},{&quot;msg&quot;:{&quot;tags&quot;:[&quot;info&quot;,&quot;search&quot;,&quot;oosInfo&quot;],&quot;isomorphicSessionId&quot;:&quot;EQIrgJ7ZvEl0FpAd9QHrB&quot;,&quot;datacenter&quot;:&quot;eus2&quot;,&quot;oosValue&quot;:&quot;IN_STOCK&quot;,&quot;oosDisplay&quot;:&quot;In stock&quot;,&quot;usItemId&quot;:&quot;106364044&quot;},&quot;ta&quot;:{&quot;pt&quot;:&quot;walmartWeb&quot;},&quot;pg&quot;:{&quot;nm&quot;:&quot;walmartWeb&quot;},&quot;r&quot;:&quot;https://www.walmart.com/cp/electronics/3944&quot;,&quot;cd&quot;:{&quot;dim&quot;:{&quot;vw&quot;:1263,&quot;vh&quot;:577,&quot;sw&quot;:1280,&quot;sh&quot;:720,&quot;iw&quot;:1280,&quot;ih&quot;:577}},&quot;ts&quot;:1673383346551,&quot;pv_id&quot;:&quot;5a0362fc-44f8-4c33-88f6-811d44c45a5a&quot;,&quot;bn&quot;:57,&quot;act&quot;:&quot;log&quot;,&quot;ctx&quot;:&quot;walmartWeb&quot;,&quot;name&quot;:&quot;wcnp_walmart-web-search&quot;,&quot;u&quot;:&quot;https://www.walmart.com/shop/deals/electronics/new-year-new-tech&quot;,&quot;la&quot;:&quot;en&quot;,&quot;opv_id&quot;:&quot;08597430-dc09-4fa2-86d6-9511e944d261&quot;,&quot;_apv&quot;:&quot;main-1.36.0-19e8b5-0108T0618&quot;,&quot;_dc&quot;:&quot;eus2&quot;,&quot;rpv_id&quot;:&quot;08597430-dc09-4fa2-86d6-9511e944d261&quot;,&quot;hc&quot;:655392272},{&quot;msg&quot;:{&quot;tags&quot;:[&quot;info&quot;,&quot;search&quot;,&quot;oosInfo&quot;],&quot;isomorphicSessionId&quot;:&quot;EQIrgJ7ZvEl0FpAd9QHrB&quot;,&quot;datacenter&quot;:&quot;eus2&quot;,&quot;oosValue&quot;:&quot;IN_STOCK&quot;,&quot;oosDisplay&quot;:&quot;In stock&quot;,&quot;usItemId&quot;:&quot;867891967&quot;},&quot;ta&quot;:{&quot;pt&quot;:&quot;walmartWeb&quot;},&quot;pg&quot;:{&quot;nm&quot;:&quot;walmartWeb&quot;},&quot;r&quot;:&quot;https://www.walmart.com/cp/electronics/3944&quot;,&quot;cd&quot;:{&quot;dim&quot;:{&quot;vw&quot;:1263,&quot;vh&quot;:577,&quot;sw&quot;:1280,&quot;sh&quot;:720,&quot;iw&quot;:1280,&quot;ih&quot;:577}},&quot;ts&quot;:1673383346556,&quot;pv_id&quot;:&quot;5a0362fc-44f8-4c33-88f6-811d44c45a5a&quot;,&quot;bn&quot;:58,&quot;act&quot;:&quot;log&quot;,&quot;ctx&quot;:&quot;walmartWeb&quot;,&quot;name&quot;:&quot;wcnp_walmart-web-search&quot;,&quot;u&quot;:&quot;https://www.walmart.com/shop/deals/electronics/new-year-new-tech&quot;,&quot;la&quot;:&quot;en&quot;,&quot;opv_id&quot;:&quot;08597430-dc09-4fa2-86d6-9511e944d261&quot;,&quot;_apv&quot;:&quot;main-1.36.0-19e8b5-0108T0618&quot;,&quot;_dc&quot;:&quot;eus2&quot;,&quot;rpv_id&quot;:&quot;08597430-dc09-4fa2-86d6-9511e944d261&quot;,&quot;hc&quot;:1882551783},{&quot;msg&quot;:{&quot;tags&quot;:[&quot;info&quot;,&quot;search&quot;,&quot;oosInfo&quot;],&quot;isomorphicSessionId&quot;:&quot;EQIrgJ7ZvEl0FpAd9QHrB&quot;,&quot;datacenter&quot;:&quot;eus2&quot;,&quot;oosValue&quot;:&quot;IN_STOCK&quot;,&quot;oosDisplay&quot;:&quot;In stock&quot;,&quot;usItemId&quot;:&quot;253409811&quot;},&quot;ta&quot;:{&quot;pt&quot;:&quot;walmartWeb&quot;},&quot;pg&quot;:{&quot;nm&quot;:&quot;walmartWeb&quot;},&quot;r&quot;:&quot;https://www.walmart.com/cp/electronics/3944&quot;,&quot;cd&quot;:{&quot;dim&quot;:{&quot;vw&quot;:1263,&quot;vh&quot;:577,&quot;sw&quot;:1280,&quot;sh&quot;:720,&quot;iw&quot;:1280,&quot;ih&quot;:577}},&quot;ts&quot;:1673383346562,&quot;pv_id&quot;:&quot;5a0362fc-44f8-4c33-88f6-811d44c45a5a&quot;,&quot;bn&quot;:59,&quot;act&quot;:&quot;log&quot;,&quot;ctx&quot;:&quot;walmartWeb&quot;,&quot;name&quot;:&quot;wcnp_walmart-web-search&quot;,&quot;u&quot;:&quot;https://www.walmart.com/shop/deals/electronics/new-year-new-tech&quot;,&quot;la&quot;:&quot;en&quot;,&quot;opv_id&quot;:&quot;08597430-dc09-4fa2-86d6-9511e944d261&quot;,&quot;_apv&quot;:&quot;main-1.36.0-19e8b5-0108T0618&quot;,&quot;_dc&quot;:&quot;eus2&quot;,&quot;rpv_id&quot;:&quot;08597430-dc09-4fa2-86d6-9511e944d261&quot;,&quot;hc&quot;:860751239},{&quot;msg&quot;:{&quot;tags&quot;:[&quot;info&quot;,&quot;search&quot;,&quot;oosInfo&quot;],&quot;isomorphicSessionId&quot;:&quot;EQIrgJ7ZvEl0FpAd9QHrB&quot;,&quot;datacenter&quot;:&quot;eus2&quot;,&quot;oosValue&quot;:&quot;IN_STOCK&quot;,&quot;oosDisplay&quot;:&quot;In stock&quot;,&quot;usItemId&quot;:&quot;433114985&quot;},&quot;ta&quot;:{&quot;pt&quot;:&quot;walmartWeb&quot;},&quot;pg&quot;:{&quot;nm&quot;:&quot;walmartWeb&quot;},&quot;r&quot;:&quot;https://www.walmart.com/cp/electronics/3944&quot;,&quot;cd&quot;:{&quot;dim&quot;:{&quot;vw&quot;:1263,&quot;vh&quot;:577,&quot;sw&quot;:1280,&quot;sh&quot;:720,&quot;iw&quot;:1280,&quot;ih&quot;:577}},&quot;ts&quot;:1673383346569,&quot;pv_id&quot;:&quot;5a0362fc-44f8-4c33-88f6-811d44c45a5a&quot;,&quot;bn&quot;:60,&quot;act&quot;:&quot;log&quot;,&quot;ctx&quot;:&quot;walmartWeb&quot;,&quot;name&quot;:&quot;wcnp_walmart-web-search&quot;,&quot;u&quot;:&quot;https://www.walmart.com/shop/deals/electronics/new-year-new-tech&quot;,&quot;la&quot;:&quot;en&quot;,&quot;opv_id&quot;:&quot;08597430-dc09-4fa2-86d6-9511e944d261&quot;,&quot;_apv&quot;:&quot;main-1.36.0-19e8b5-0108T0618&quot;,&quot;_dc&quot;:&quot;eus2&quot;,&quot;rpv_id&quot;:&quot;08597430-dc09-4fa2-86d6-9511e944d261&quot;,&quot;hc&quot;:319275935},{&quot;msg&quot;:{&quot;tags&quot;:[&quot;info&quot;,&quot;search&quot;,&quot;oosInfo&quot;],&quot;isomorphicSessionId&quot;:&quot;EQIrgJ7ZvEl0FpAd9QHrB&quot;,&quot;datacenter&quot;:&quot;eus2&quot;,&quot;oosValue&quot;:&quot;IN_STOCK&quot;,&quot;oosDisplay&quot;:&quot;In stock&quot;,&quot;usItemId&quot;:&quot;119153219&quot;},&quot;ta&quot;:{&quot;pt&quot;:&quot;walmartWeb&quot;},&quot;pg&quot;:{&quot;nm&quot;:&quot;walmartWeb&quot;},&quot;r&quot;:&quot;https://www.walmart.com/cp/electronics/3944&quot;,&quot;cd&quot;:{&quot;dim&quot;:{&quot;vw&quot;:1263,&quot;vh&quot;:577,&quot;sw&quot;:1280,&quot;sh&quot;:720,&quot;iw&quot;:1280,&quot;ih&quot;:577}},&quot;ts&quot;:1673383346575,&quot;pv_id&quot;:&quot;5a0362fc-44f8-4c33-88f6-811d44c45a5a&quot;,&quot;bn&quot;:61,&quot;act&quot;:&quot;log&quot;,&quot;ctx&quot;:&quot;walmartWeb&quot;,&quot;name&quot;:&quot;wcnp_walmart-web-search&quot;,&quot;u&quot;:&quot;https://www.walmart.com/shop/deals/electronics/new-year-new-tech&quot;,&quot;la&quot;:&quot;en&quot;,&quot;opv_id&quot;:&quot;08597430-dc09-4fa2-86d6-9511e944d261&quot;,&quot;_apv&quot;:&quot;main-1.36.0-19e8b5-0108T0618&quot;,&quot;_dc&quot;:&quot;eus2&quot;,&quot;rpv_id&quot;:&quot;08597430-dc09-4fa2-86d6-9511e944d261&quot;,&quot;hc&quot;:2057565835},{&quot;msg&quot;:{&quot;tags&quot;:[&quot;info&quot;,&quot;search&quot;,&quot;oosInfo&quot;],&quot;isomorphicSessionId&quot;:&quot;EQIrgJ7ZvEl0FpAd9QHrB&quot;,&quot;datacenter&quot;:&quot;eus2&quot;,&quot;oosValue&quot;:&quot;IN_STOCK&quot;,&quot;oosDisplay&quot;:&quot;In stock&quot;,&quot;usItemId&quot;:&quot;471426225&quot;},&quot;ta&quot;:{&quot;pt&quot;:&quot;walmartWeb&quot;},&quot;pg&quot;:{&quot;nm&quot;:&quot;walmartWeb&quot;},&quot;r&quot;:&quot;https://www.walmart.com/cp/electronics/3944&quot;,&quot;cd&quot;:{&quot;dim&quot;:{&quot;vw&quot;:1263,&quot;vh&quot;:577,&quot;sw&quot;:1280,&quot;sh&quot;:720,&quot;iw&quot;:1280,&quot;ih&quot;:577}},&quot;ts&quot;:1673383346580,&quot;pv_id&quot;:&quot;5a0362fc-44f8-4c33-88f6-811d44c45a5a&quot;,&quot;bn&quot;:62,&quot;act&quot;:&quot;log&quot;,&quot;ctx&quot;:&quot;walmartWeb&quot;,&quot;name&quot;:&quot;wcnp_walmart-web-search&quot;,&quot;u&quot;:&quot;https://www.walmart.com/shop/deals/electronics/new-year-new-tech&quot;,&quot;la&quot;:&quot;en&quot;,&quot;opv_id&quot;:&quot;08597430-dc09-4fa2-86d6-9511e944d261&quot;,&quot;_apv&quot;:&quot;main-1.36.0-19e8b5-0108T0618&quot;,&quot;_dc&quot;:&quot;eus2&quot;,&quot;rpv_id&quot;:&quot;08597430-dc09-4fa2-86d6-9511e944d261&quot;,&quot;hc&quot;:1649819811},{&quot;msg&quot;:{&quot;tags&quot;:[&quot;info&quot;,&quot;search&quot;,&quot;oosInfo&quot;],&quot;isomorphicSessionId&quot;:&quot;EQIrgJ7ZvEl0FpAd9QHrB&quot;,&quot;datacenter&quot;:&quot;eus2&quot;,&quot;oosValue&quot;:&quot;IN_STOCK&quot;,&quot;oosDisplay&quot;:&quot;In stock&quot;,&quot;usItemId&quot;:&quot;866513703&quot;},&quot;ta&quot;:{&quot;pt&quot;:&quot;walmartWeb&quot;},&quot;pg&quot;:{&quot;nm&quot;:&quot;walmartWeb&quot;},&quot;r&quot;:&quot;https://www.walmart.com/cp/electronics/3944&quot;,&quot;cd&quot;:{&quot;dim&quot;:{&quot;vw&quot;:1263,&quot;vh&quot;:577,&quot;sw&quot;:1280,&quot;sh&quot;:720,&quot;iw&quot;:1280,&quot;ih&quot;:577}},&quot;ts&quot;:1673383346585,&quot;pv_id&quot;:&quot;5a0362fc-44f8-4c33-88f6-811d44c45a5a&quot;,&quot;bn&quot;:63,&quot;act&quot;:&quot;log&quot;,&quot;ctx&quot;:&quot;walmartWeb&quot;,&quot;name&quot;:&quot;wcnp_walmart-web-search&quot;,&quot;u&quot;:&quot;https://www.walmart.com/shop/deals/electronics/new-year-new-tech&quot;,&quot;la&quot;:&quot;en&quot;,&quot;opv_id&quot;:&quot;08597430-dc09-4fa2-86d6-9511e944d261&quot;,&quot;_apv&quot;:&quot;main-1.36.0-19e8b5-0108T0618&quot;,&quot;_dc&quot;:&quot;eus2&quot;,&quot;rpv_id&quot;:&quot;08597430-dc09-4fa2-86d6-9511e944d261&quot;,&quot;hc&quot;:1873650735},{&quot;msg&quot;:{&quot;tags&quot;:[&quot;info&quot;,&quot;search&quot;,&quot;oosInfo&quot;],&quot;isomorphicSessionId&quot;:&quot;EQIrgJ7ZvEl0FpAd9QHrB&quot;,&quot;datacenter&quot;:&quot;eus2&quot;,&quot;oosValue&quot;:&quot;IN_STOCK&quot;,&quot;oosDisplay&quot;:&quot;In stock&quot;,&quot;usItemId&quot;:&quot;1553851139&quot;},&quot;ta&quot;:{&quot;pt&quot;:&quot;walmartWeb&quot;},&quot;pg&quot;:{&quot;nm&quot;:&quot;walmartWeb&quot;},&quot;r&quot;:&quot;https://www.walmart.com/cp/electronics/3944&quot;,&quot;cd&quot;:{&quot;dim&quot;:{&quot;vw&quot;:1263,&quot;vh&quot;:577,&quot;sw&quot;:1280,&quot;sh&quot;:720,&quot;iw&quot;:1280,&quot;ih&quot;:577}},&quot;ts&quot;:1673383346591,&quot;pv_id&quot;:&quot;5a0362fc-44f8-4c33-88f6-811d44c45a5a&quot;,&quot;bn&quot;:64,&quot;act&quot;:&quot;log&quot;,&quot;ctx&quot;:&quot;walmartWeb&quot;,&quot;name&quot;:&quot;wcnp_walmart-web-search&quot;,&quot;u&quot;:&quot;https://www.walmart.com/shop/deals/electronics/new-year-new-tech&quot;,&quot;la&quot;:&quot;en&quot;,&quot;opv_id&quot;:&quot;08597430-dc09-4fa2-86d6-9511e944d261&quot;,&quot;_apv&quot;:&quot;main-1.36.0-19e8b5-0108T0618&quot;,&quot;_dc&quot;:&quot;eus2&quot;,&quot;rpv_id&quot;:&quot;08597430-dc09-4fa2-86d6-9511e944d261&quot;,&quot;hc&quot;:254865461},{&quot;msg&quot;:{&quot;tags&quot;:[&quot;info&quot;,&quot;search&quot;,&quot;oosInfo&quot;],&quot;isomorphicSessionId&quot;:&quot;EQIrgJ7ZvEl0FpAd9QHrB&quot;,&quot;datacenter&quot;:&quot;eus2&quot;,&quot;oosValue&quot;:&quot;IN_STOCK&quot;,&quot;oosDisplay&quot;:&quot;In stock&quot;,&quot;usItemId&quot;:&quot;1605105632&quot;},&quot;ta&quot;:{&quot;pt&quot;:&quot;walmartWeb&quot;},&quot;pg&quot;:{&quot;nm&quot;:&quot;walmartWeb&quot;},&quot;r&quot;:&quot;https://www.walmart.com/cp/electronics/3944&quot;,&quot;cd&quot;:{&quot;dim&quot;:{&quot;vw&quot;:1263,&quot;vh&quot;:577,&quot;sw&quot;:1280,&quot;sh&quot;:720,&quot;iw&quot;:1280,&quot;ih&quot;:577}},&quot;ts&quot;:1673383346599,&quot;pv_id&quot;:&quot;5a0362fc-44f8-4c33-88f6-811d44c45a5a&quot;,&quot;bn&quot;:65,&quot;act&quot;:&quot;log&quot;,&quot;ctx&quot;:&quot;walmartWeb&quot;,&quot;name&quot;:&quot;wcnp_walmart-web-search&quot;,&quot;u&quot;:&quot;https://www.walmart.com/shop/deals/electronics/new-year-new-tech&quot;,&quot;la&quot;:&quot;en&quot;,&quot;opv_id&quot;:&quot;08597430-dc09-4fa2-86d6-9511e944d261&quot;,&quot;_apv&quot;:&quot;main-1.36.0-19e8b5-0108T0618&quot;,&quot;_dc&quot;:&quot;eus2&quot;,&quot;rpv_id&quot;:&quot;08597430-dc09-4fa2-86d6-9511e944d261&quot;,&quot;hc&quot;:1155394830}]</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="bpvId" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">bpvId</stringProp>
+                  <stringProp name="Argument.value">5a0362fc-44f8-4c33-88f6-811d44c45a5a</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="bhc" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">bhc</stringProp>
+                  <stringProp name="Argument.value">1723109862</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="bsn" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">bsn</stringProp>
+                  <stringProp name="Argument.value">43</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="aid" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">aid</stringProp>
+                  <stringProp name="Argument.value">usoa</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="an" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">an</stringProp>
+                  <stringProp name="Argument.value">d.www.1.0</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_2}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">rum.gif</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Content-type" elementType="Header">
+                  <stringProp name="Header.name">Content-type</stringProp>
+                  <stringProp name="Header.value">application/x-www-form-urlencoded</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://beacon.walmart.com/rum.gif" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="_apv" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">_apv</stringProp>
+                  <stringProp name="Argument.value">main-1.36.0-19e8b5-0108T0618</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="bn" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">bn</stringProp>
+                  <stringProp name="Argument.value">74</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="act" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">act</stringProp>
+                  <stringProp name="Argument.value">pageView</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="pv_id" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">pv_id</stringProp>
+                  <stringProp name="Argument.value">5a0362fc-44f8-4c33-88f6-811d44c45a5a</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="sm" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">sm</stringProp>
+                  <stringProp name="Argument.value">{&quot;ci&quot;:&quot;0&quot;,&quot;r&quot;:60}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="sn" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">sn</stringProp>
+                  <stringProp name="Argument.value">77</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="_dc" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">_dc</stringProp>
+                  <stringProp name="Argument.value">eus2</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="sr" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">sr</stringProp>
+                  <stringProp name="Argument.value">{&quot;me&quot;:&quot;regular&quot;,&quot;sa&quot;:&quot;DEFAULT&quot;,&quot;pm&quot;:[&quot;12/26/21: New Year New Tech Inline Search&quot;,&quot;12/27/22: New Year New Tech Shop Page Config&quot;,&quot;New Pills Module Module, Tuesday, December 14, 2021, 10:47:22:43 am&quot;,&quot;New Sort &amp; Filter on Search Page Module, Tuesday, December 14, 2021, 10:49:04:70 am&quot;,&quot;XSITE NEW YEAR RESET - New Year New Tech Skinny banner 12/20/22&quot;,&quot;GenericCopyBlock Module, Tuesday, June 14, 2022, 10:29:13:08 pm&quot;,&quot;Enricher Static Module&quot;,&quot;stack0_New Year New Tech&quot;],&quot;sc&quot;:{&quot;mt&quot;:&quot;{\&quot;trn\&quot;:0,\&quot;eo\&quot;:\&quot;N\&quot;,\&quot;id\&quot;:\&quot;TxtgfhBAAtlHvtcSc-U6LDWW24Fg0FyWIVnn\&quot;}&quot;}}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="cd" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">cd</stringProp>
+                  <stringProp name="Argument.value">{&quot;dim&quot;:{&quot;vw&quot;:1263,&quot;vh&quot;:577,&quot;sw&quot;:1280,&quot;sh&quot;:720,&quot;iw&quot;:1280,&quot;ih&quot;:577}}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="st" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">st</stringProp>
+                  <stringProp name="Argument.value">{&quot;id&quot;:&quot;3081&quot;}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="sv" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">sv</stringProp>
+                  <stringProp name="Argument.value">1.1.90</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="ctx" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">ctx</stringProp>
+                  <stringProp name="Argument.value">deals</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="rpv_id" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">rpv_id</stringProp>
+                  <stringProp name="Argument.value">08597430-dc09-4fa2-86d6-9511e944d261</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="an" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">an</stringProp>
+                  <stringProp name="Argument.value">d.www.1.0</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="ta" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">ta</stringProp>
+                  <stringProp name="Argument.value">{&quot;dn&quot;:&quot;New Year New Tech&quot;,&quot;di&quot;:&quot;deals/electronics/new-year-new-tech&quot;,&quot;ci&quot;:&quot;0&quot;,&quot;pt&quot;:&quot;shop&quot;,&quot;dt&quot;:&quot;deals electronics new year new tech - Walmart.com&quot;}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="opv_id" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">opv_id</stringProp>
+                  <stringProp name="Argument.value">08597430-dc09-4fa2-86d6-9511e944d261</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="r" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">r</stringProp>
+                  <stringProp name="Argument.value">https://www.walmart.com/cp/electronics/3944</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="av" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">av</stringProp>
+                  <stringProp name="Argument.value">v0</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="la" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">la</stringProp>
+                  <stringProp name="Argument.value">en</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="u" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">u</stringProp>
+                  <stringProp name="Argument.value">https://www.walmart.com/shop/deals/electronics/new-year-new-tech</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="pg" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">pg</stringProp>
+                  <stringProp name="Argument.value">{&quot;nm&quot;:&quot;shop&quot;}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="name" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">name</stringProp>
+                  <stringProp name="Argument.value">dealsData</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="hc" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">hc</stringProp>
+                  <stringProp name="Argument.value">1719944949</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="aid" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">aid</stringProp>
+                  <stringProp name="Argument.value">usoa</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="nm" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">nm</stringProp>
+                  <stringProp name="Argument.value">{&quot;nm&quot;:&quot;shop&quot;}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="ts" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">ts</stringProp>
+                  <stringProp name="Argument.value">1673383346897</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_2}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">rum.gif</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Content-type" elementType="Header">
+                  <stringProp name="Header.name">Content-type</stringProp>
+                  <stringProp name="Header.value">application/x-www-form-urlencoded</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://www.walmart.com/orchestra/home/graphql/updateItems/414ddd13b8cf9052e35acbac4b11920fe1d33cb033da708b690b27c767f62872" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;variables&quot;:{&quot;input&quot;:{&quot;enableLiquorBox&quot;:true,&quot;cartId&quot;:&quot;bf5dec03-ef0f-4c2f-9058-9b244c1e1bc1&quot;,&quot;items&quot;:[{&quot;offerId&quot;:&quot;654538BBADE74FB2BDA15AAB2221D2B1&quot;,&quot;quantity&quot;:1,&quot;usItemId&quot;:&quot;428114216&quot;,&quot;name&quot;:&quot;onn. 43 Class 4K UHD (2160P) LED Roku Smart TV HDR (100012584)&quot;}],&quot;enableCartSplitClarity&quot;:false},&quot;detailed&quot;:false,&quot;includeImageAndName&quot;:false,&quot;includePartialFulfillmentSwitching&quot;:false,&quot;enableAEBadge&quot;:false,&quot;enableBadges&quot;:false,&quot;includeQueueing&quot;:false,&quot;includeExpressSla&quot;:true,&quot;enableACCScheduling&quot;:true,&quot;includeWeeklyReservation&quot;:false,&quot;enableWalmartPlusFreeDiscountedExpress&quot;:true,&quot;enableCartBookslotShortcut&quot;:false,&quot;enableFutureInventoryCartBookslot&quot;:false,&quot;enableOrderLimit&quot;:false,&quot;includeOtherDetailed&quot;:true,&quot;enableWeightedItems&quot;:false,&quot;enableGicEngagement&quot;:true,&quot;enableWplusCashback&quot;:false,&quot;enableExpressReservationEndTime&quot;:false,&quot;enableBenefitSavings&quot;:false,&quot;enableCartLevelMSI&quot;:false,&quot;enableIntentControl&quot;:false,&quot;enableReturnsLabel&quot;:false,&quot;enablePickupNotAvailable&quot;:false,&quot;enableStarRatings&quot;:false,&quot;includeGrandAndSavedSubtotal&quot;:false}}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">orchestra/home/graphql/updateItems/414ddd13b8cf9052e35acbac4b11920fe1d33cb033da708b690b27c767f62872</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="x-o-correlation-id" elementType="Header">
+                  <stringProp name="Header.name">x-o-correlation-id</stringProp>
+                  <stringProp name="Header.value">4RNnT67cYUvvzQhrE5zw_-gSSHj49y3ng2C6</stringProp>
+                </elementProp>
+                <elementProp name="DEVICE_PROFILE_REF_ID" elementType="Header">
+                  <stringProp name="Header.name">DEVICE_PROFILE_REF_ID</stringProp>
+                  <stringProp name="Header.value">0aVxcQKx9tWIDczaeAQNKCQobFrEX58sgI1n</stringProp>
+                </elementProp>
+                <elementProp name="x-latency-trace" elementType="Header">
+                  <stringProp name="Header.name">x-latency-trace</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="WM_MP" elementType="Header">
+                  <stringProp name="Header.name">WM_MP</stringProp>
+                  <stringProp name="Header.value">true</stringProp>
+                </elementProp>
+                <elementProp name="x-o-platform-version" elementType="Header">
+                  <stringProp name="Header.name">x-o-platform-version</stringProp>
+                  <stringProp name="Header.value">main-1.36.0-19e8b5-0108T0618</stringProp>
+                </elementProp>
+                <elementProp name="x-o-gql-query" elementType="Header">
+                  <stringProp name="Header.name">x-o-gql-query</stringProp>
+                  <stringProp name="Header.value">mutation updateItems</stringProp>
+                </elementProp>
+                <elementProp name="WM_PAGE_URL" elementType="Header">
+                  <stringProp name="Header.name">WM_PAGE_URL</stringProp>
+                  <stringProp name="Header.value">https://www.walmart.com/shop/deals/electronics/new-year-new-tech</stringProp>
+                </elementProp>
+                <elementProp name="X-APOLLO-OPERATION-NAME" elementType="Header">
+                  <stringProp name="Header.name">X-APOLLO-OPERATION-NAME</stringProp>
+                  <stringProp name="Header.value">updateItems</stringProp>
+                </elementProp>
+                <elementProp name="x-o-bu" elementType="Header">
+                  <stringProp name="Header.name">x-o-bu</stringProp>
+                  <stringProp name="Header.value">WALMART-US</stringProp>
+                </elementProp>
+                <elementProp name="traceparent" elementType="Header">
+                  <stringProp name="Header.name">traceparent</stringProp>
+                  <stringProp name="Header.value">00-5c21dfba18a39847a96545e02803db24-3e84df3dfd2f476d-00</stringProp>
+                </elementProp>
+                <elementProp name="x-o-mart" elementType="Header">
+                  <stringProp name="Header.name">x-o-mart</stringProp>
+                  <stringProp name="Header.value">B2C</stringProp>
+                </elementProp>
+                <elementProp name="x-o-platform" elementType="Header">
+                  <stringProp name="Header.name">x-o-platform</stringProp>
+                  <stringProp name="Header.value">rweb</stringProp>
+                </elementProp>
+                <elementProp name="x-o-segment" elementType="Header">
+                  <stringProp name="Header.name">x-o-segment</stringProp>
+                  <stringProp name="Header.value">oaoh</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="accept" elementType="Header">
+                  <stringProp name="Header.name">accept</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="x-enable-server-timing" elementType="Header">
+                  <stringProp name="Header.name">x-enable-server-timing</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="x-o-ccm" elementType="Header">
+                  <stringProp name="Header.name">x-o-ccm</stringProp>
+                  <stringProp name="Header.value">server</stringProp>
+                </elementProp>
+                <elementProp name="wm_qos.correlation_id" elementType="Header">
+                  <stringProp name="Header.name">wm_qos.correlation_id</stringProp>
+                  <stringProp name="Header.value">4RNnT67cYUvvzQhrE5zw_-gSSHj49y3ng2C6</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://www.walmart.com/orchestra/home/graphql/getCart/15e3cfd99108b1a26cabdb8747e1d6d59f418aba9fdf385f7b3414dff8569620?variables=%7B%22cartInput%22%3A%7B%22cartId%22%3A%22bf5dec03-ef0f-4c2f-9058-9b244c1e1bc1%22%2C%22enableLiquorBox%22%3Atrue%2C%22enableCartSplitClarity%22%3Afalse%7D%2C%22includePartialFulfillmentSwitching%22%3Afalse%2C%22enableAEBadge%22%3Atrue%2C%22enableBadges%22%3Atrue%2C%22includeQueueing%22%3Atrue%2C%22includeExpressSla%22%3Atrue%2C%22enableACCScheduling%22%3Atrue%2C%22enableWeeklyReservationCartBookslot%22%3Atrue%2C%22enableWalmartPlusFreeDiscountedExpress%22%3Atrue%2C%22enableCartBookslotShortcut%22%3Afalse%2C%22enableFutureInventoryCartBookslot%22%3Afalse%2C%22enableWplusCashback%22%3Afalse%2C%22enableExpressReservationEndTime%22%3Afalse%2C%22enableBenefitSavings%22%3Afalse%2C%22enableCartLevelMSI%22%3Afalse%2C%22enableIntentControl%22%3Afalse%2C%22enableReturnsLabel%22%3Afalse%2C%22enablePickupNotAvailable%22%3Afalse%2C%22enableStarRatings%22%3Afalse%7D" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="variables" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">variables</stringProp>
+                  <stringProp name="Argument.value">{&quot;cartInput&quot;:{&quot;cartId&quot;:&quot;bf5dec03-ef0f-4c2f-9058-9b244c1e1bc1&quot;,&quot;enableLiquorBox&quot;:true,&quot;enableCartSplitClarity&quot;:false},&quot;includePartialFulfillmentSwitching&quot;:false,&quot;enableAEBadge&quot;:true,&quot;enableBadges&quot;:true,&quot;includeQueueing&quot;:true,&quot;includeExpressSla&quot;:true,&quot;enableACCScheduling&quot;:true,&quot;enableWeeklyReservationCartBookslot&quot;:true,&quot;enableWalmartPlusFreeDiscountedExpress&quot;:true,&quot;enableCartBookslotShortcut&quot;:false,&quot;enableFutureInventoryCartBookslot&quot;:false,&quot;enableWplusCashback&quot;:false,&quot;enableExpressReservationEndTime&quot;:false,&quot;enableBenefitSavings&quot;:false,&quot;enableCartLevelMSI&quot;:false,&quot;enableIntentControl&quot;:false,&quot;enableReturnsLabel&quot;:false,&quot;enablePickupNotAvailable&quot;:false,&quot;enableStarRatings&quot;:false}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">orchestra/home/graphql/getCart/15e3cfd99108b1a26cabdb8747e1d6d59f418aba9fdf385f7b3414dff8569620</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="x-o-correlation-id" elementType="Header">
+                  <stringProp name="Header.name">x-o-correlation-id</stringProp>
+                  <stringProp name="Header.value">LL1JC2Xrxf3AMvB1KHWKZyo0ohiAbtAc20_d</stringProp>
+                </elementProp>
+                <elementProp name="DEVICE_PROFILE_REF_ID" elementType="Header">
+                  <stringProp name="Header.name">DEVICE_PROFILE_REF_ID</stringProp>
+                  <stringProp name="Header.value">0aVxcQKx9tWIDczaeAQNKCQobFrEX58sgI1n</stringProp>
+                </elementProp>
+                <elementProp name="x-latency-trace" elementType="Header">
+                  <stringProp name="Header.name">x-latency-trace</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="WM_MP" elementType="Header">
+                  <stringProp name="Header.name">WM_MP</stringProp>
+                  <stringProp name="Header.value">true</stringProp>
+                </elementProp>
+                <elementProp name="x-o-platform-version" elementType="Header">
+                  <stringProp name="Header.name">x-o-platform-version</stringProp>
+                  <stringProp name="Header.value">main-1.36.0-19e8b5-0108T0618</stringProp>
+                </elementProp>
+                <elementProp name="x-o-gql-query" elementType="Header">
+                  <stringProp name="Header.name">x-o-gql-query</stringProp>
+                  <stringProp name="Header.value">query getCart</stringProp>
+                </elementProp>
+                <elementProp name="WM_PAGE_URL" elementType="Header">
+                  <stringProp name="Header.name">WM_PAGE_URL</stringProp>
+                  <stringProp name="Header.value">https://www.walmart.com/shop/deals/electronics/new-year-new-tech</stringProp>
+                </elementProp>
+                <elementProp name="X-APOLLO-OPERATION-NAME" elementType="Header">
+                  <stringProp name="Header.name">X-APOLLO-OPERATION-NAME</stringProp>
+                  <stringProp name="Header.value">getCart</stringProp>
+                </elementProp>
+                <elementProp name="x-o-bu" elementType="Header">
+                  <stringProp name="Header.name">x-o-bu</stringProp>
+                  <stringProp name="Header.value">WALMART-US</stringProp>
+                </elementProp>
+                <elementProp name="traceparent" elementType="Header">
+                  <stringProp name="Header.name">traceparent</stringProp>
+                  <stringProp name="Header.value">00-8449dcb4ba4fac7e7b7c9a0b77f5ad1a-c01a5929a7c9c05c-00</stringProp>
+                </elementProp>
+                <elementProp name="x-o-mart" elementType="Header">
+                  <stringProp name="Header.name">x-o-mart</stringProp>
+                  <stringProp name="Header.value">B2C</stringProp>
+                </elementProp>
+                <elementProp name="x-o-platform" elementType="Header">
+                  <stringProp name="Header.name">x-o-platform</stringProp>
+                  <stringProp name="Header.value">rweb</stringProp>
+                </elementProp>
+                <elementProp name="x-o-segment" elementType="Header">
+                  <stringProp name="Header.name">x-o-segment</stringProp>
+                  <stringProp name="Header.value">oaoh</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="accept" elementType="Header">
+                  <stringProp name="Header.name">accept</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="x-enable-server-timing" elementType="Header">
+                  <stringProp name="Header.name">x-enable-server-timing</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="x-o-ccm" elementType="Header">
+                  <stringProp name="Header.name">x-o-ccm</stringProp>
+                  <stringProp name="Header.value">server</stringProp>
+                </elementProp>
+                <elementProp name="wm_qos.correlation_id" elementType="Header">
+                  <stringProp name="Header.name">wm_qos.correlation_id</stringProp>
+                  <stringProp name="Header.value">LL1JC2Xrxf3AMvB1KHWKZyo0ohiAbtAc20_d</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://www.walmart.com/cart" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">cart</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Synthetic-Request-For-Logging" elementType="Header">
+                  <stringProp name="Header.name">Synthetic-Request-For-Logging</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://www.walmart.com/orchestra/cartxo/graphql/getSFL/962d58817f8235f8f422e1f0ce5d52153bef4a8d567195c70d6f428f27d63662?variables=%7B%22sflInput%22%3A%7B%22sflId%22%3Anull%2C%22pageInfo%22%3A%7B%22pageSize%22%3A10%2C%22pageCursor%22%3Anull%7D%7D%2C%22enableBadges%22%3Atrue%7D" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="variables" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">variables</stringProp>
+                  <stringProp name="Argument.value">{&quot;sflInput&quot;:{&quot;sflId&quot;:null,&quot;pageInfo&quot;:{&quot;pageSize&quot;:10,&quot;pageCursor&quot;:null}},&quot;enableBadges&quot;:true}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">orchestra/cartxo/graphql/getSFL/962d58817f8235f8f422e1f0ce5d52153bef4a8d567195c70d6f428f27d63662</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="x-o-correlation-id" elementType="Header">
+                  <stringProp name="Header.name">x-o-correlation-id</stringProp>
+                  <stringProp name="Header.value">eXMFkVvjOYg3xJ_A1Xc8to2RR6kXVkyr0G7T</stringProp>
+                </elementProp>
+                <elementProp name="DEVICE_PROFILE_REF_ID" elementType="Header">
+                  <stringProp name="Header.name">DEVICE_PROFILE_REF_ID</stringProp>
+                  <stringProp name="Header.value">0aVxcQKx9tWIDczaeAQNKCQobFrEX58sgI1n</stringProp>
+                </elementProp>
+                <elementProp name="x-latency-trace" elementType="Header">
+                  <stringProp name="Header.name">x-latency-trace</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="WM_MP" elementType="Header">
+                  <stringProp name="Header.name">WM_MP</stringProp>
+                  <stringProp name="Header.value">true</stringProp>
+                </elementProp>
+                <elementProp name="x-o-platform-version" elementType="Header">
+                  <stringProp name="Header.name">x-o-platform-version</stringProp>
+                  <stringProp name="Header.value">main-1.36.0-19e8b5-0108T0618</stringProp>
+                </elementProp>
+                <elementProp name="x-o-gql-query" elementType="Header">
+                  <stringProp name="Header.name">x-o-gql-query</stringProp>
+                  <stringProp name="Header.value">query getSFL</stringProp>
+                </elementProp>
+                <elementProp name="WM_PAGE_URL" elementType="Header">
+                  <stringProp name="Header.name">WM_PAGE_URL</stringProp>
+                  <stringProp name="Header.value">https://www.walmart.com/cart</stringProp>
+                </elementProp>
+                <elementProp name="X-APOLLO-OPERATION-NAME" elementType="Header">
+                  <stringProp name="Header.name">X-APOLLO-OPERATION-NAME</stringProp>
+                  <stringProp name="Header.value">getSFL</stringProp>
+                </elementProp>
+                <elementProp name="x-o-bu" elementType="Header">
+                  <stringProp name="Header.name">x-o-bu</stringProp>
+                  <stringProp name="Header.value">WALMART-US</stringProp>
+                </elementProp>
+                <elementProp name="traceparent" elementType="Header">
+                  <stringProp name="Header.name">traceparent</stringProp>
+                  <stringProp name="Header.value">00-b5d2896dd745472b8734a1f81bbbc32d-fba03f69c3b6b356-00</stringProp>
+                </elementProp>
+                <elementProp name="x-o-mart" elementType="Header">
+                  <stringProp name="Header.name">x-o-mart</stringProp>
+                  <stringProp name="Header.value">B2C</stringProp>
+                </elementProp>
+                <elementProp name="x-o-platform" elementType="Header">
+                  <stringProp name="Header.name">x-o-platform</stringProp>
+                  <stringProp name="Header.value">rweb</stringProp>
+                </elementProp>
+                <elementProp name="x-o-segment" elementType="Header">
+                  <stringProp name="Header.name">x-o-segment</stringProp>
+                  <stringProp name="Header.value">oaoh</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="accept" elementType="Header">
+                  <stringProp name="Header.name">accept</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="x-enable-server-timing" elementType="Header">
+                  <stringProp name="Header.name">x-enable-server-timing</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="x-o-ccm" elementType="Header">
+                  <stringProp name="Header.name">x-o-ccm</stringProp>
+                  <stringProp name="Header.value">server</stringProp>
+                </elementProp>
+                <elementProp name="wm_qos.correlation_id" elementType="Header">
+                  <stringProp name="Header.name">wm_qos.correlation_id</stringProp>
+                  <stringProp name="Header.value">eXMFkVvjOYg3xJ_A1Xc8to2RR6kXVkyr0G7T</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://www.walmart.com/orchestra/home/graphql/PostCartLoadPage/d9231af938bde0652db6841d83d6f512858372fb4c18f218c297af112855befe?variables=%7B%22p13n%22%3A%7B%22userClientInfo%22%3A%7B%22deviceType%22%3A%22desktop%22%2C%22callType%22%3A%22CLIENT%22%7D%2C%22userReqInfo%22%3A%7B%22storeIds%22%3A%5B3081%5D%2C%22cartContext%22%3A%7B%22cartIntent%22%3A%22SHIPPING%22%2C%22thresholdInfo%22%3A%7B%22balanceToMinimumThreshold%22%3A0%2C%22belowMinFee%22%3Anull%2C%22deliveryMinFee%22%3Anull%7D%2C%22slotExpirationTime%22%3Anull%2C%22slotExpirationTime_SC%22%3Anull%2C%22isUnScheduledPickUp%22%3Afalse%2C%22items%22%3A%5B%7B%22id%22%3A%22428114216%22%2C%22availableQty%22%3A%22%22%2C%22fulfillmentType%22%3A%22SHIPPING%22%2C%22price%22%3A198%2C%22wasPrice%22%3A243.26%2C%22fulfillmentGroup%22%3A%22FCGroup%22%2C%22badges%22%3A%5B%22BESTSELLER%22%2C%22ROLLBACK%22%5D%7D%5D%7D%2C%22requestType%22%3A%5B%22CAROUSELS%22%2C%22NUDGE%22%2C%22WPLUS_BANNER%22%5D%7D%7D%2C%22enableWplusCashbackValue%22%3Afalse%2C%22enableWplusBannersPostCartLoadPageValue%22%3Atrue%7D" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="variables" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">variables</stringProp>
+                  <stringProp name="Argument.value">{&quot;p13n&quot;:{&quot;userClientInfo&quot;:{&quot;deviceType&quot;:&quot;desktop&quot;,&quot;callType&quot;:&quot;CLIENT&quot;},&quot;userReqInfo&quot;:{&quot;storeIds&quot;:[3081],&quot;cartContext&quot;:{&quot;cartIntent&quot;:&quot;SHIPPING&quot;,&quot;thresholdInfo&quot;:{&quot;balanceToMinimumThreshold&quot;:0,&quot;belowMinFee&quot;:null,&quot;deliveryMinFee&quot;:null},&quot;slotExpirationTime&quot;:null,&quot;slotExpirationTime_SC&quot;:null,&quot;isUnScheduledPickUp&quot;:false,&quot;items&quot;:[{&quot;id&quot;:&quot;428114216&quot;,&quot;availableQty&quot;:&quot;&quot;,&quot;fulfillmentType&quot;:&quot;SHIPPING&quot;,&quot;price&quot;:198,&quot;wasPrice&quot;:243.26,&quot;fulfillmentGroup&quot;:&quot;FCGroup&quot;,&quot;badges&quot;:[&quot;BESTSELLER&quot;,&quot;ROLLBACK&quot;]}]},&quot;requestType&quot;:[&quot;CAROUSELS&quot;,&quot;NUDGE&quot;,&quot;WPLUS_BANNER&quot;]}},&quot;enableWplusCashbackValue&quot;:false,&quot;enableWplusBannersPostCartLoadPageValue&quot;:true}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">orchestra/home/graphql/PostCartLoadPage/d9231af938bde0652db6841d83d6f512858372fb4c18f218c297af112855befe</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="x-o-correlation-id" elementType="Header">
+                  <stringProp name="Header.name">x-o-correlation-id</stringProp>
+                  <stringProp name="Header.value">i9TBVrWiTJiE_mR1_RHsBbpPvJLo18gPNGn5</stringProp>
+                </elementProp>
+                <elementProp name="DEVICE_PROFILE_REF_ID" elementType="Header">
+                  <stringProp name="Header.name">DEVICE_PROFILE_REF_ID</stringProp>
+                  <stringProp name="Header.value">0aVxcQKx9tWIDczaeAQNKCQobFrEX58sgI1n</stringProp>
+                </elementProp>
+                <elementProp name="x-latency-trace" elementType="Header">
+                  <stringProp name="Header.name">x-latency-trace</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="WM_MP" elementType="Header">
+                  <stringProp name="Header.name">WM_MP</stringProp>
+                  <stringProp name="Header.value">true</stringProp>
+                </elementProp>
+                <elementProp name="x-o-platform-version" elementType="Header">
+                  <stringProp name="Header.name">x-o-platform-version</stringProp>
+                  <stringProp name="Header.value">main-1.36.0-19e8b5-0108T0618</stringProp>
+                </elementProp>
+                <elementProp name="x-o-gql-query" elementType="Header">
+                  <stringProp name="Header.name">x-o-gql-query</stringProp>
+                  <stringProp name="Header.value">query PostCartLoadPage</stringProp>
+                </elementProp>
+                <elementProp name="WM_PAGE_URL" elementType="Header">
+                  <stringProp name="Header.name">WM_PAGE_URL</stringProp>
+                  <stringProp name="Header.value">https://www.walmart.com/cart</stringProp>
+                </elementProp>
+                <elementProp name="X-APOLLO-OPERATION-NAME" elementType="Header">
+                  <stringProp name="Header.name">X-APOLLO-OPERATION-NAME</stringProp>
+                  <stringProp name="Header.value">PostCartLoadPage</stringProp>
+                </elementProp>
+                <elementProp name="x-o-bu" elementType="Header">
+                  <stringProp name="Header.name">x-o-bu</stringProp>
+                  <stringProp name="Header.value">WALMART-US</stringProp>
+                </elementProp>
+                <elementProp name="traceparent" elementType="Header">
+                  <stringProp name="Header.name">traceparent</stringProp>
+                  <stringProp name="Header.value">00-5d908d26fa378bd562982ccab99a1197-ada72e3d11f8ae45-00</stringProp>
+                </elementProp>
+                <elementProp name="x-o-mart" elementType="Header">
+                  <stringProp name="Header.name">x-o-mart</stringProp>
+                  <stringProp name="Header.value">B2C</stringProp>
+                </elementProp>
+                <elementProp name="x-o-platform" elementType="Header">
+                  <stringProp name="Header.name">x-o-platform</stringProp>
+                  <stringProp name="Header.value">rweb</stringProp>
+                </elementProp>
+                <elementProp name="x-o-segment" elementType="Header">
+                  <stringProp name="Header.name">x-o-segment</stringProp>
+                  <stringProp name="Header.value">oaoh</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="accept" elementType="Header">
+                  <stringProp name="Header.name">accept</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="x-enable-server-timing" elementType="Header">
+                  <stringProp name="Header.name">x-enable-server-timing</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="x-o-ccm" elementType="Header">
+                  <stringProp name="Header.name">x-o-ccm</stringProp>
+                  <stringProp name="Header.value">server</stringProp>
+                </elementProp>
+                <elementProp name="wm_qos.correlation_id" elementType="Header">
+                  <stringProp name="Header.name">wm_qos.correlation_id</stringProp>
+                  <stringProp name="Header.value">i9TBVrWiTJiE_mR1_RHsBbpPvJLo18gPNGn5</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://www.walmart.com/cart?ss=signIn&amp;checkout=true" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="ss" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">ss</stringProp>
+                  <stringProp name="Argument.value">signIn</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="checkout" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">checkout</stringProp>
+                  <stringProp name="Argument.value">true</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">cart</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Synthetic-Request-For-Logging" elementType="Header">
+                  <stringProp name="Header.name">Synthetic-Request-For-Logging</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://www.walmart.com/orchestra/cartxo/graphql/getSFL/962d58817f8235f8f422e1f0ce5d52153bef4a8d567195c70d6f428f27d63662?variables=%7B%22sflInput%22%3A%7B%22sflId%22%3Anull%2C%22pageInfo%22%3A%7B%22pageSize%22%3A10%2C%22pageCursor%22%3Anull%7D%7D%2C%22enableBadges%22%3Atrue%7D" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="variables" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">variables</stringProp>
+                  <stringProp name="Argument.value">{&quot;sflInput&quot;:{&quot;sflId&quot;:null,&quot;pageInfo&quot;:{&quot;pageSize&quot;:10,&quot;pageCursor&quot;:null}},&quot;enableBadges&quot;:true}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">orchestra/cartxo/graphql/getSFL/962d58817f8235f8f422e1f0ce5d52153bef4a8d567195c70d6f428f27d63662</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="x-o-correlation-id" elementType="Header">
+                  <stringProp name="Header.name">x-o-correlation-id</stringProp>
+                  <stringProp name="Header.value">0jao1OU33MFSP0YXYaOqelNHxt11-ozxwArj</stringProp>
+                </elementProp>
+                <elementProp name="DEVICE_PROFILE_REF_ID" elementType="Header">
+                  <stringProp name="Header.name">DEVICE_PROFILE_REF_ID</stringProp>
+                  <stringProp name="Header.value">0aVxcQKx9tWIDczaeAQNKCQobFrEX58sgI1n</stringProp>
+                </elementProp>
+                <elementProp name="x-latency-trace" elementType="Header">
+                  <stringProp name="Header.name">x-latency-trace</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="WM_MP" elementType="Header">
+                  <stringProp name="Header.name">WM_MP</stringProp>
+                  <stringProp name="Header.value">true</stringProp>
+                </elementProp>
+                <elementProp name="x-o-platform-version" elementType="Header">
+                  <stringProp name="Header.name">x-o-platform-version</stringProp>
+                  <stringProp name="Header.value">main-1.36.0-19e8b5-0108T0618</stringProp>
+                </elementProp>
+                <elementProp name="x-o-gql-query" elementType="Header">
+                  <stringProp name="Header.name">x-o-gql-query</stringProp>
+                  <stringProp name="Header.value">query getSFL</stringProp>
+                </elementProp>
+                <elementProp name="WM_PAGE_URL" elementType="Header">
+                  <stringProp name="Header.name">WM_PAGE_URL</stringProp>
+                  <stringProp name="Header.value">https://www.walmart.com/cart</stringProp>
+                </elementProp>
+                <elementProp name="X-APOLLO-OPERATION-NAME" elementType="Header">
+                  <stringProp name="Header.name">X-APOLLO-OPERATION-NAME</stringProp>
+                  <stringProp name="Header.value">getSFL</stringProp>
+                </elementProp>
+                <elementProp name="x-o-bu" elementType="Header">
+                  <stringProp name="Header.name">x-o-bu</stringProp>
+                  <stringProp name="Header.value">WALMART-US</stringProp>
+                </elementProp>
+                <elementProp name="traceparent" elementType="Header">
+                  <stringProp name="Header.name">traceparent</stringProp>
+                  <stringProp name="Header.value">00-f99709d37550240920ff3bdd5dca073f-dec5922feee333f8-00</stringProp>
+                </elementProp>
+                <elementProp name="x-o-mart" elementType="Header">
+                  <stringProp name="Header.name">x-o-mart</stringProp>
+                  <stringProp name="Header.value">B2C</stringProp>
+                </elementProp>
+                <elementProp name="x-o-platform" elementType="Header">
+                  <stringProp name="Header.name">x-o-platform</stringProp>
+                  <stringProp name="Header.value">rweb</stringProp>
+                </elementProp>
+                <elementProp name="x-o-segment" elementType="Header">
+                  <stringProp name="Header.name">x-o-segment</stringProp>
+                  <stringProp name="Header.value">oaoh</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="accept" elementType="Header">
+                  <stringProp name="Header.name">accept</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="x-enable-server-timing" elementType="Header">
+                  <stringProp name="Header.name">x-enable-server-timing</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="x-o-ccm" elementType="Header">
+                  <stringProp name="Header.name">x-o-ccm</stringProp>
+                  <stringProp name="Header.value">server</stringProp>
+                </elementProp>
+                <elementProp name="wm_qos.correlation_id" elementType="Header">
+                  <stringProp name="Header.name">wm_qos.correlation_id</stringProp>
+                  <stringProp name="Header.value">0jao1OU33MFSP0YXYaOqelNHxt11-ozxwArj</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://www.walmart.com/cart" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">cart</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Synthetic-Request-For-Logging" elementType="Header">
+                  <stringProp name="Header.name">Synthetic-Request-For-Logging</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://www.walmart.com/cart?ss=signIn&amp;checkout=true" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="ss" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">ss</stringProp>
+                  <stringProp name="Argument.value">signIn</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="checkout" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">checkout</stringProp>
+                  <stringProp name="Argument.value">true</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">cart</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Synthetic-Request-For-Logging" elementType="Header">
+                  <stringProp name="Header.name">Synthetic-Request-For-Logging</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://www.walmart.com/orchestra/cartxo/graphql/MergeAndGetCart/ca2914c9685427a16abececcb3825e216518bb8bebe7b1321e96da1b65090d28" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;variables&quot;:{&quot;input&quot;:{&quot;cartId&quot;:null,&quot;strategy&quot;:&quot;SWEEP&quot;,&quot;enableLiquorBox&quot;:true},&quot;includeImageAndName&quot;:true,&quot;detailed&quot;:true,&quot;includePartialFulfillmentSwitching&quot;:false,&quot;enableAEBadge&quot;:true,&quot;enableBadges&quot;:true,&quot;includeQueueing&quot;:true,&quot;includeExpressSla&quot;:true,&quot;enableACCScheduling&quot;:true,&quot;includeWeeklyReservation&quot;:true,&quot;enableWalmartPlusFreeDiscountedExpress&quot;:true,&quot;enableWalmartPlusFreeDiscountedExpressProgram&quot;:true,&quot;enableWplusCashback&quot;:false,&quot;enableCartBookslotShortcut&quot;:false,&quot;enableFutureInventoryCartBookslot&quot;:false,&quot;enableWeightedItems&quot;:true,&quot;includeOtherDetailed&quot;:true,&quot;enableExpressReservationEndTime&quot;:false,&quot;enableCartLevelMSI&quot;:false,&quot;enableIntentControl&quot;:false,&quot;enableReturnsLabel&quot;:false,&quot;enableStarRatings&quot;:false,&quot;enableBenefitSavings&quot;:false,&quot;includeGrandAndSavedSubtotal&quot;:true,&quot;enablePickupNotAvailable&quot;:false}}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">orchestra/cartxo/graphql/MergeAndGetCart/ca2914c9685427a16abececcb3825e216518bb8bebe7b1321e96da1b65090d28</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="x-o-correlation-id" elementType="Header">
+                  <stringProp name="Header.name">x-o-correlation-id</stringProp>
+                  <stringProp name="Header.value">Jys2BK1jKsDP_BVQHa5yhmLV3L3CDAJtoLO9</stringProp>
+                </elementProp>
+                <elementProp name="DEVICE_PROFILE_REF_ID" elementType="Header">
+                  <stringProp name="Header.name">DEVICE_PROFILE_REF_ID</stringProp>
+                  <stringProp name="Header.value">0aVxcQKx9tWIDczaeAQNKCQobFrEX58sgI1n</stringProp>
+                </elementProp>
+                <elementProp name="x-latency-trace" elementType="Header">
+                  <stringProp name="Header.name">x-latency-trace</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="WM_MP" elementType="Header">
+                  <stringProp name="Header.name">WM_MP</stringProp>
+                  <stringProp name="Header.value">true</stringProp>
+                </elementProp>
+                <elementProp name="x-o-platform-version" elementType="Header">
+                  <stringProp name="Header.name">x-o-platform-version</stringProp>
+                  <stringProp name="Header.value">main-1.36.0-19e8b5-0108T0618</stringProp>
+                </elementProp>
+                <elementProp name="x-o-gql-query" elementType="Header">
+                  <stringProp name="Header.name">x-o-gql-query</stringProp>
+                  <stringProp name="Header.value">mutation MergeAndGetCart</stringProp>
+                </elementProp>
+                <elementProp name="WM_PAGE_URL" elementType="Header">
+                  <stringProp name="Header.name">WM_PAGE_URL</stringProp>
+                  <stringProp name="Header.value">https://www.walmart.com/cart?ss=signIn&amp;checkout=true</stringProp>
+                </elementProp>
+                <elementProp name="X-APOLLO-OPERATION-NAME" elementType="Header">
+                  <stringProp name="Header.name">X-APOLLO-OPERATION-NAME</stringProp>
+                  <stringProp name="Header.value">MergeAndGetCart</stringProp>
+                </elementProp>
+                <elementProp name="x-o-bu" elementType="Header">
+                  <stringProp name="Header.name">x-o-bu</stringProp>
+                  <stringProp name="Header.value">WALMART-US</stringProp>
+                </elementProp>
+                <elementProp name="traceparent" elementType="Header">
+                  <stringProp name="Header.name">traceparent</stringProp>
+                  <stringProp name="Header.value">00-8efdb57738ff23f9054ccd5a1cefacec-2f0fef1bd7b2ac0d-00</stringProp>
+                </elementProp>
+                <elementProp name="x-o-mart" elementType="Header">
+                  <stringProp name="Header.name">x-o-mart</stringProp>
+                  <stringProp name="Header.value">B2C</stringProp>
+                </elementProp>
+                <elementProp name="x-o-platform" elementType="Header">
+                  <stringProp name="Header.name">x-o-platform</stringProp>
+                  <stringProp name="Header.value">rweb</stringProp>
+                </elementProp>
+                <elementProp name="x-o-segment" elementType="Header">
+                  <stringProp name="Header.name">x-o-segment</stringProp>
+                  <stringProp name="Header.value">oaoh</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="accept" elementType="Header">
+                  <stringProp name="Header.name">accept</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="x-enable-server-timing" elementType="Header">
+                  <stringProp name="Header.name">x-enable-server-timing</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="x-o-ccm" elementType="Header">
+                  <stringProp name="Header.name">x-o-ccm</stringProp>
+                  <stringProp name="Header.value">server</stringProp>
+                </elementProp>
+                <elementProp name="wm_qos.correlation_id" elementType="Header">
+                  <stringProp name="Header.name">wm_qos.correlation_id</stringProp>
+                  <stringProp name="Header.value">Jys2BK1jKsDP_BVQHa5yhmLV3L3CDAJtoLO9</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://www.walmart.com/orchestra/home/graphql/LastCallPage/48cbe64aa5a32cb639f19089b2ed03d48394aa28dfb8887b52d829f1b0c48e7d?variables=%7B%22p13n%22%3A%7B%22userReqInfo%22%3A%7B%22preferredStoreId%22%3A3081%2C%22cartContext%22%3A%7B%22freeShippingThreshold%22%3A0%2C%22cartTotal%22%3A198%2C%22items%22%3A%5B%7B%22id%22%3A%22428114216%22%2C%22qty%22%3A1%2C%22fulfillmentGroup%22%3A%22FCGroup%22%2C%22timestamp%22%3A1673383357000%2C%22fulfillmentIntent%22%3A%22SHIPPING%22%7D%5D%7D%7D%2C%22userClientInfo%22%3A%7B%22deviceType%22%3A%22desktop%22%2C%22callType%22%3A%22CLIENT%22%7D%7D%2C%22pageType%22%3A%22LastCallPage%22%2C%22tenant%22%3A%22WM_GLASS%22%7D" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="variables" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">variables</stringProp>
+                  <stringProp name="Argument.value">{&quot;p13n&quot;:{&quot;userReqInfo&quot;:{&quot;preferredStoreId&quot;:3081,&quot;cartContext&quot;:{&quot;freeShippingThreshold&quot;:0,&quot;cartTotal&quot;:198,&quot;items&quot;:[{&quot;id&quot;:&quot;428114216&quot;,&quot;qty&quot;:1,&quot;fulfillmentGroup&quot;:&quot;FCGroup&quot;,&quot;timestamp&quot;:1673383357000,&quot;fulfillmentIntent&quot;:&quot;SHIPPING&quot;}]}},&quot;userClientInfo&quot;:{&quot;deviceType&quot;:&quot;desktop&quot;,&quot;callType&quot;:&quot;CLIENT&quot;}},&quot;pageType&quot;:&quot;LastCallPage&quot;,&quot;tenant&quot;:&quot;WM_GLASS&quot;}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">orchestra/home/graphql/LastCallPage/48cbe64aa5a32cb639f19089b2ed03d48394aa28dfb8887b52d829f1b0c48e7d</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="x-o-correlation-id" elementType="Header">
+                  <stringProp name="Header.name">x-o-correlation-id</stringProp>
+                  <stringProp name="Header.value">sTRQdN8PaXnUmwlNhJ-dLM1IKhIQc8Xax8oc</stringProp>
+                </elementProp>
+                <elementProp name="DEVICE_PROFILE_REF_ID" elementType="Header">
+                  <stringProp name="Header.name">DEVICE_PROFILE_REF_ID</stringProp>
+                  <stringProp name="Header.value">0aVxcQKx9tWIDczaeAQNKCQobFrEX58sgI1n</stringProp>
+                </elementProp>
+                <elementProp name="x-latency-trace" elementType="Header">
+                  <stringProp name="Header.name">x-latency-trace</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="WM_MP" elementType="Header">
+                  <stringProp name="Header.name">WM_MP</stringProp>
+                  <stringProp name="Header.value">true</stringProp>
+                </elementProp>
+                <elementProp name="x-o-platform-version" elementType="Header">
+                  <stringProp name="Header.name">x-o-platform-version</stringProp>
+                  <stringProp name="Header.value">main-1.36.0-19e8b5-0108T0618</stringProp>
+                </elementProp>
+                <elementProp name="x-o-gql-query" elementType="Header">
+                  <stringProp name="Header.name">x-o-gql-query</stringProp>
+                  <stringProp name="Header.value">query LastCallPage</stringProp>
+                </elementProp>
+                <elementProp name="WM_PAGE_URL" elementType="Header">
+                  <stringProp name="Header.name">WM_PAGE_URL</stringProp>
+                  <stringProp name="Header.value">https://www.walmart.com/cart?ss=signIn&amp;checkout=true</stringProp>
+                </elementProp>
+                <elementProp name="X-APOLLO-OPERATION-NAME" elementType="Header">
+                  <stringProp name="Header.name">X-APOLLO-OPERATION-NAME</stringProp>
+                  <stringProp name="Header.value">LastCallPage</stringProp>
+                </elementProp>
+                <elementProp name="x-o-bu" elementType="Header">
+                  <stringProp name="Header.name">x-o-bu</stringProp>
+                  <stringProp name="Header.value">WALMART-US</stringProp>
+                </elementProp>
+                <elementProp name="traceparent" elementType="Header">
+                  <stringProp name="Header.name">traceparent</stringProp>
+                  <stringProp name="Header.value">00-bacf96c74646f3b93b2a5554b2fd86fe-c3563b6c0977cd9d-00</stringProp>
+                </elementProp>
+                <elementProp name="x-o-mart" elementType="Header">
+                  <stringProp name="Header.name">x-o-mart</stringProp>
+                  <stringProp name="Header.value">B2C</stringProp>
+                </elementProp>
+                <elementProp name="x-o-platform" elementType="Header">
+                  <stringProp name="Header.name">x-o-platform</stringProp>
+                  <stringProp name="Header.value">rweb</stringProp>
+                </elementProp>
+                <elementProp name="x-o-segment" elementType="Header">
+                  <stringProp name="Header.name">x-o-segment</stringProp>
+                  <stringProp name="Header.value">oaoh</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="accept" elementType="Header">
+                  <stringProp name="Header.name">accept</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="x-enable-server-timing" elementType="Header">
+                  <stringProp name="Header.name">x-enable-server-timing</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="x-o-ccm" elementType="Header">
+                  <stringProp name="Header.name">x-o-ccm</stringProp>
+                  <stringProp name="Header.value">server</stringProp>
+                </elementProp>
+                <elementProp name="wm_qos.correlation_id" elementType="Header">
+                  <stringProp name="Header.name">wm_qos.correlation_id</stringProp>
+                  <stringProp name="Header.value">sTRQdN8PaXnUmwlNhJ-dLM1IKhIQc8Xax8oc</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://www.walmart.com/checkout/review-order?cartId=a51668c1-8daf-4d4e-bb2b-1620c1fabc0c" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="cartId" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">cartId</stringProp>
+                  <stringProp name="Argument.value">a51668c1-8daf-4d4e-bb2b-1620c1fabc0c</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">checkout/review-order</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+                  <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Uniform Random Timer" enabled="true">
+              <stringProp name="RandomTimer.range">55160.0</stringProp>
+              <stringProp name="ConstantTimer.delay">27580</stringProp>
+              <stringProp name="TestPlan.comments">Recorded time was 55160 milliseconds</stringProp>
+            </UniformRandomTimer>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://www.walmart.com/orchestra/api/ccm/v2/bootstrap?configNames=account,amends,cart,checkout,footer,payments,pulse,shared,wplus,wallet,onedebitcard" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="configNames" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">configNames</stringProp>
+                  <stringProp name="Argument.value">account,amends,cart,checkout,footer,payments,pulse,shared,wplus,wallet,onedebitcard</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">orchestra/api/ccm/v2/bootstrap</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="x-o-correlation-id" elementType="Header">
+                  <stringProp name="Header.name">x-o-correlation-id</stringProp>
+                  <stringProp name="Header.value">vvtd5akbLqmcAO8AwWj-bbZYA0kQvjxSV2pH</stringProp>
+                </elementProp>
+                <elementProp name="DEVICE_PROFILE_REF_ID" elementType="Header">
+                  <stringProp name="Header.name">DEVICE_PROFILE_REF_ID</stringProp>
+                  <stringProp name="Header.value">0aVxcQKx9tWIDczaeAQNKCQobFrEX58sgI1n</stringProp>
+                </elementProp>
+                <elementProp name="x-latency-trace" elementType="Header">
+                  <stringProp name="Header.name">x-latency-trace</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="WM_MP" elementType="Header">
+                  <stringProp name="Header.name">WM_MP</stringProp>
+                  <stringProp name="Header.value">true</stringProp>
+                </elementProp>
+                <elementProp name="x-o-platform-version" elementType="Header">
+                  <stringProp name="Header.name">x-o-platform-version</stringProp>
+                  <stringProp name="Header.value">main-1.36.0-19e8b5-0108T0618</stringProp>
+                </elementProp>
+                <elementProp name="x-o-bu" elementType="Header">
+                  <stringProp name="Header.name">x-o-bu</stringProp>
+                  <stringProp name="Header.value">WALMART-US</stringProp>
+                </elementProp>
+                <elementProp name="traceparent" elementType="Header">
+                  <stringProp name="Header.name">traceparent</stringProp>
+                  <stringProp name="Header.value">00-74f67ffca54753d5eda87ee47fa776bf-472cec2b00271faf-00</stringProp>
+                </elementProp>
+                <elementProp name="x-o-mart" elementType="Header">
+                  <stringProp name="Header.name">x-o-mart</stringProp>
+                  <stringProp name="Header.value">B2C</stringProp>
+                </elementProp>
+                <elementProp name="x-o-platform" elementType="Header">
+                  <stringProp name="Header.name">x-o-platform</stringProp>
+                  <stringProp name="Header.value">rweb</stringProp>
+                </elementProp>
+                <elementProp name="x-o-segment" elementType="Header">
+                  <stringProp name="Header.name">x-o-segment</stringProp>
+                  <stringProp name="Header.value">oaoh</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="accept" elementType="Header">
+                  <stringProp name="Header.name">accept</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="x-enable-server-timing" elementType="Header">
+                  <stringProp name="Header.name">x-enable-server-timing</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="wm_qos.correlation_id" elementType="Header">
+                  <stringProp name="Header.name">wm_qos.correlation_id</stringProp>
+                  <stringProp name="Header.value">vvtd5akbLqmcAO8AwWj-bbZYA0kQvjxSV2pH</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://www.walmart.com/orchestra/cartxo/graphql/GetMembership/240be90fd37aaf90a22e508fa4d701c7c9ee826d825f384d4501f0f3bea52992?variables=%7B%7D" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="variables" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">variables</stringProp>
+                  <stringProp name="Argument.value">{}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">orchestra/cartxo/graphql/GetMembership/240be90fd37aaf90a22e508fa4d701c7c9ee826d825f384d4501f0f3bea52992</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="x-o-correlation-id" elementType="Header">
+                  <stringProp name="Header.name">x-o-correlation-id</stringProp>
+                  <stringProp name="Header.value">aeQ6S-_S_B3wePV3k4NHwrYQ31hn4AaI1kbc</stringProp>
+                </elementProp>
+                <elementProp name="DEVICE_PROFILE_REF_ID" elementType="Header">
+                  <stringProp name="Header.name">DEVICE_PROFILE_REF_ID</stringProp>
+                  <stringProp name="Header.value">0aVxcQKx9tWIDczaeAQNKCQobFrEX58sgI1n</stringProp>
+                </elementProp>
+                <elementProp name="x-latency-trace" elementType="Header">
+                  <stringProp name="Header.name">x-latency-trace</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="WM_MP" elementType="Header">
+                  <stringProp name="Header.name">WM_MP</stringProp>
+                  <stringProp name="Header.value">true</stringProp>
+                </elementProp>
+                <elementProp name="x-o-platform-version" elementType="Header">
+                  <stringProp name="Header.name">x-o-platform-version</stringProp>
+                  <stringProp name="Header.value">main-1.36.0-19e8b5-0108T0618</stringProp>
+                </elementProp>
+                <elementProp name="x-o-gql-query" elementType="Header">
+                  <stringProp name="Header.name">x-o-gql-query</stringProp>
+                  <stringProp name="Header.value">query GetMembership</stringProp>
+                </elementProp>
+                <elementProp name="x-o-bu" elementType="Header">
+                  <stringProp name="Header.name">x-o-bu</stringProp>
+                  <stringProp name="Header.value">WALMART-US</stringProp>
+                </elementProp>
+                <elementProp name="X-APOLLO-OPERATION-NAME" elementType="Header">
+                  <stringProp name="Header.name">X-APOLLO-OPERATION-NAME</stringProp>
+                  <stringProp name="Header.value">GetMembership</stringProp>
+                </elementProp>
+                <elementProp name="traceparent" elementType="Header">
+                  <stringProp name="Header.name">traceparent</stringProp>
+                  <stringProp name="Header.value">00-991e88754091462e886b22e3eeb0d1b4-3cd2d6fd319fd841-00</stringProp>
+                </elementProp>
+                <elementProp name="x-o-mart" elementType="Header">
+                  <stringProp name="Header.name">x-o-mart</stringProp>
+                  <stringProp name="Header.value">B2C</stringProp>
+                </elementProp>
+                <elementProp name="x-o-platform" elementType="Header">
+                  <stringProp name="Header.name">x-o-platform</stringProp>
+                  <stringProp name="Header.value">rweb</stringProp>
+                </elementProp>
+                <elementProp name="x-o-segment" elementType="Header">
+                  <stringProp name="Header.name">x-o-segment</stringProp>
+                  <stringProp name="Header.value">oaoh</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="accept" elementType="Header">
+                  <stringProp name="Header.name">accept</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="x-enable-server-timing" elementType="Header">
+                  <stringProp name="Header.name">x-enable-server-timing</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="x-o-ccm" elementType="Header">
+                  <stringProp name="Header.name">x-o-ccm</stringProp>
+                  <stringProp name="Header.value">server</stringProp>
+                </elementProp>
+                <elementProp name="wm_qos.correlation_id" elementType="Header">
+                  <stringProp name="Header.name">wm_qos.correlation_id</stringProp>
+                  <stringProp name="Header.value">aeQ6S-_S_B3wePV3k4NHwrYQ31hn4AaI1kbc</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://www.walmart.com/orchestra/cartxo/graphql/CreateContract/90912955e30c51c1b31c1fbb690cca5a6a93694ff6f8a1dddd3ef26de42b7485" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;variables&quot;:{&quot;createContractInput&quot;:{&quot;cartId&quot;:&quot;a51668c1-8daf-4d4e-bb2b-1620c1fabc0c&quot;,&quot;consumerContext&quot;:{&quot;supportedPayments&quot;:[&quot;AFFIRM&quot;,&quot;CREDITCARD&quot;,&quot;DIRECTED_SPEND&quot;,&quot;EBT&quot;,&quot;GIFTCARD&quot;,&quot;INCOMM&quot;,&quot;PAP_EBT&quot;,&quot;PAYPAL_1X&quot;,&quot;PAYPAL_BA&quot;,&quot;WMT_REWARDS&quot;,&quot;SOLUTRAN&quot;]}},&quot;promosEnable&quot;:true,&quot;wplusEnabled&quot;:true,&quot;isACCEnabled&quot;:true,&quot;enableWalmartPlusFreeDiscountedExpress&quot;:true,&quot;charityOfChoiceEnabled&quot;:true,&quot;enablePhotoMigration&quot;:false,&quot;wplusSplashSignupEnabled&quot;:true,&quot;wplusSplashSignupPhase3Enabled&quot;:false,&quot;enableTYPinDrop&quot;:true,&quot;enablePaidSignupBanner&quot;:false,&quot;enableAccessPoint&quot;:false}}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">orchestra/cartxo/graphql/CreateContract/90912955e30c51c1b31c1fbb690cca5a6a93694ff6f8a1dddd3ef26de42b7485</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="x-o-correlation-id" elementType="Header">
+                  <stringProp name="Header.name">x-o-correlation-id</stringProp>
+                  <stringProp name="Header.value">wcG9H2DSPfF4mOBoTmE7eadcU6iFqZlwwydq</stringProp>
+                </elementProp>
+                <elementProp name="DEVICE_PROFILE_REF_ID" elementType="Header">
+                  <stringProp name="Header.name">DEVICE_PROFILE_REF_ID</stringProp>
+                  <stringProp name="Header.value">0aVxcQKx9tWIDczaeAQNKCQobFrEX58sgI1n</stringProp>
+                </elementProp>
+                <elementProp name="x-latency-trace" elementType="Header">
+                  <stringProp name="Header.name">x-latency-trace</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="WM_MP" elementType="Header">
+                  <stringProp name="Header.name">WM_MP</stringProp>
+                  <stringProp name="Header.value">true</stringProp>
+                </elementProp>
+                <elementProp name="x-o-platform-version" elementType="Header">
+                  <stringProp name="Header.name">x-o-platform-version</stringProp>
+                  <stringProp name="Header.value">main-1.36.0-19e8b5-0108T0618</stringProp>
+                </elementProp>
+                <elementProp name="x-o-gql-query" elementType="Header">
+                  <stringProp name="Header.name">x-o-gql-query</stringProp>
+                  <stringProp name="Header.value">mutation CreateContract</stringProp>
+                </elementProp>
+                <elementProp name="x-o-bu" elementType="Header">
+                  <stringProp name="Header.name">x-o-bu</stringProp>
+                  <stringProp name="Header.value">WALMART-US</stringProp>
+                </elementProp>
+                <elementProp name="X-APOLLO-OPERATION-NAME" elementType="Header">
+                  <stringProp name="Header.name">X-APOLLO-OPERATION-NAME</stringProp>
+                  <stringProp name="Header.value">CreateContract</stringProp>
+                </elementProp>
+                <elementProp name="responseGroups" elementType="Header">
+                  <stringProp name="Header.name">responseGroups</stringProp>
+                  <stringProp name="Header.value">substitution,chargeforsubs</stringProp>
+                </elementProp>
+                <elementProp name="traceparent" elementType="Header">
+                  <stringProp name="Header.name">traceparent</stringProp>
+                  <stringProp name="Header.value">00-686af97cca1f80d0f240255fe69ebab7-4e3ff78494a525c5-00</stringProp>
+                </elementProp>
+                <elementProp name="x-o-mart" elementType="Header">
+                  <stringProp name="Header.name">x-o-mart</stringProp>
+                  <stringProp name="Header.value">B2C</stringProp>
+                </elementProp>
+                <elementProp name="x-o-platform" elementType="Header">
+                  <stringProp name="Header.name">x-o-platform</stringProp>
+                  <stringProp name="Header.value">rweb</stringProp>
+                </elementProp>
+                <elementProp name="x-o-segment" elementType="Header">
+                  <stringProp name="Header.name">x-o-segment</stringProp>
+                  <stringProp name="Header.value">oaoh</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="accept" elementType="Header">
+                  <stringProp name="Header.name">accept</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="x-enable-server-timing" elementType="Header">
+                  <stringProp name="Header.name">x-enable-server-timing</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="x-o-ccm" elementType="Header">
+                  <stringProp name="Header.name">x-o-ccm</stringProp>
+                  <stringProp name="Header.value">server</stringProp>
+                </elementProp>
+                <elementProp name="x-o-tp-phase" elementType="Header">
+                  <stringProp name="Header.name">x-o-tp-phase</stringProp>
+                  <stringProp name="Header.value">tp6</stringProp>
+                </elementProp>
+                <elementProp name="wm_qos.correlation_id" elementType="Header">
+                  <stringProp name="Header.name">wm_qos.correlation_id</stringProp>
+                  <stringProp name="Header.value">wcG9H2DSPfF4mOBoTmE7eadcU6iFqZlwwydq</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://www.walmart.com/orchestra/cartxo/graphql/GetAccountAddressById/aaf61a0e155f1f36a3ab771c57accd118495cfcd76a83602ee0c72b010c5da6c?variables=%7B%22id%22%3A%22%22%7D" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="variables" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">variables</stringProp>
+                  <stringProp name="Argument.value">{&quot;id&quot;:&quot;&quot;}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">orchestra/cartxo/graphql/GetAccountAddressById/aaf61a0e155f1f36a3ab771c57accd118495cfcd76a83602ee0c72b010c5da6c</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="x-o-correlation-id" elementType="Header">
+                  <stringProp name="Header.name">x-o-correlation-id</stringProp>
+                  <stringProp name="Header.value">e8FTb60O9DhO6U_fXjUKx8fU6WEqRcUC9BST</stringProp>
+                </elementProp>
+                <elementProp name="DEVICE_PROFILE_REF_ID" elementType="Header">
+                  <stringProp name="Header.name">DEVICE_PROFILE_REF_ID</stringProp>
+                  <stringProp name="Header.value">0aVxcQKx9tWIDczaeAQNKCQobFrEX58sgI1n</stringProp>
+                </elementProp>
+                <elementProp name="x-latency-trace" elementType="Header">
+                  <stringProp name="Header.name">x-latency-trace</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="WM_MP" elementType="Header">
+                  <stringProp name="Header.name">WM_MP</stringProp>
+                  <stringProp name="Header.value">true</stringProp>
+                </elementProp>
+                <elementProp name="x-o-platform-version" elementType="Header">
+                  <stringProp name="Header.name">x-o-platform-version</stringProp>
+                  <stringProp name="Header.value">main-1.36.0-19e8b5-0108T0618</stringProp>
+                </elementProp>
+                <elementProp name="x-o-gql-query" elementType="Header">
+                  <stringProp name="Header.name">x-o-gql-query</stringProp>
+                  <stringProp name="Header.value">query GetAccountAddressById</stringProp>
+                </elementProp>
+                <elementProp name="x-o-bu" elementType="Header">
+                  <stringProp name="Header.name">x-o-bu</stringProp>
+                  <stringProp name="Header.value">WALMART-US</stringProp>
+                </elementProp>
+                <elementProp name="X-APOLLO-OPERATION-NAME" elementType="Header">
+                  <stringProp name="Header.name">X-APOLLO-OPERATION-NAME</stringProp>
+                  <stringProp name="Header.value">GetAccountAddressById</stringProp>
+                </elementProp>
+                <elementProp name="traceparent" elementType="Header">
+                  <stringProp name="Header.name">traceparent</stringProp>
+                  <stringProp name="Header.value">00-5830dd642a24457ef4fc0a3c1e27024f-e9502ec4f3e366f3-00</stringProp>
+                </elementProp>
+                <elementProp name="x-o-mart" elementType="Header">
+                  <stringProp name="Header.name">x-o-mart</stringProp>
+                  <stringProp name="Header.value">B2C</stringProp>
+                </elementProp>
+                <elementProp name="x-o-platform" elementType="Header">
+                  <stringProp name="Header.name">x-o-platform</stringProp>
+                  <stringProp name="Header.value">rweb</stringProp>
+                </elementProp>
+                <elementProp name="x-o-segment" elementType="Header">
+                  <stringProp name="Header.name">x-o-segment</stringProp>
+                  <stringProp name="Header.value">oaoh</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="accept" elementType="Header">
+                  <stringProp name="Header.name">accept</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="x-enable-server-timing" elementType="Header">
+                  <stringProp name="Header.name">x-enable-server-timing</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="x-o-ccm" elementType="Header">
+                  <stringProp name="Header.name">x-o-ccm</stringProp>
+                  <stringProp name="Header.value">server</stringProp>
+                </elementProp>
+                <elementProp name="wm_qos.correlation_id" elementType="Header">
+                  <stringProp name="Header.name">wm_qos.correlation_id</stringProp>
+                  <stringProp name="Header.value">e8FTb60O9DhO6U_fXjUKx8fU6WEqRcUC9BST</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://www.walmart.com/orchestra/cartxo/graphql/DeliveryAddresses/b85ea82c9121b279cff1860a5812230eb15fd2a35aa72c1b1618341dceeebf9b?variables=%7B%22responseGroup%22%3A%22storeDeliverable%22%7D" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="variables" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">variables</stringProp>
+                  <stringProp name="Argument.value">{&quot;responseGroup&quot;:&quot;storeDeliverable&quot;}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">orchestra/cartxo/graphql/DeliveryAddresses/b85ea82c9121b279cff1860a5812230eb15fd2a35aa72c1b1618341dceeebf9b</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="x-o-correlation-id" elementType="Header">
+                  <stringProp name="Header.name">x-o-correlation-id</stringProp>
+                  <stringProp name="Header.value">FHozS15v413Pj0kgi3XCw1J7QNRaZpWJUnub</stringProp>
+                </elementProp>
+                <elementProp name="DEVICE_PROFILE_REF_ID" elementType="Header">
+                  <stringProp name="Header.name">DEVICE_PROFILE_REF_ID</stringProp>
+                  <stringProp name="Header.value">0aVxcQKx9tWIDczaeAQNKCQobFrEX58sgI1n</stringProp>
+                </elementProp>
+                <elementProp name="x-latency-trace" elementType="Header">
+                  <stringProp name="Header.name">x-latency-trace</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="WM_MP" elementType="Header">
+                  <stringProp name="Header.name">WM_MP</stringProp>
+                  <stringProp name="Header.value">true</stringProp>
+                </elementProp>
+                <elementProp name="x-o-platform-version" elementType="Header">
+                  <stringProp name="Header.name">x-o-platform-version</stringProp>
+                  <stringProp name="Header.value">main-1.36.0-19e8b5-0108T0618</stringProp>
+                </elementProp>
+                <elementProp name="x-o-gql-query" elementType="Header">
+                  <stringProp name="Header.name">x-o-gql-query</stringProp>
+                  <stringProp name="Header.value">query DeliveryAddresses</stringProp>
+                </elementProp>
+                <elementProp name="x-o-bu" elementType="Header">
+                  <stringProp name="Header.name">x-o-bu</stringProp>
+                  <stringProp name="Header.value">WALMART-US</stringProp>
+                </elementProp>
+                <elementProp name="X-APOLLO-OPERATION-NAME" elementType="Header">
+                  <stringProp name="Header.name">X-APOLLO-OPERATION-NAME</stringProp>
+                  <stringProp name="Header.value">DeliveryAddresses</stringProp>
+                </elementProp>
+                <elementProp name="traceparent" elementType="Header">
+                  <stringProp name="Header.name">traceparent</stringProp>
+                  <stringProp name="Header.value">00-341bd041ede53924f03b78b4f29f575e-de804111990196b6-00</stringProp>
+                </elementProp>
+                <elementProp name="x-o-mart" elementType="Header">
+                  <stringProp name="Header.name">x-o-mart</stringProp>
+                  <stringProp name="Header.value">B2C</stringProp>
+                </elementProp>
+                <elementProp name="x-o-platform" elementType="Header">
+                  <stringProp name="Header.name">x-o-platform</stringProp>
+                  <stringProp name="Header.value">rweb</stringProp>
+                </elementProp>
+                <elementProp name="x-o-segment" elementType="Header">
+                  <stringProp name="Header.name">x-o-segment</stringProp>
+                  <stringProp name="Header.value">oaoh</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="accept" elementType="Header">
+                  <stringProp name="Header.name">accept</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="x-enable-server-timing" elementType="Header">
+                  <stringProp name="Header.name">x-enable-server-timing</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="x-o-ccm" elementType="Header">
+                  <stringProp name="Header.name">x-o-ccm</stringProp>
+                  <stringProp name="Header.value">server</stringProp>
+                </elementProp>
+                <elementProp name="wm_qos.correlation_id" elementType="Header">
+                  <stringProp name="Header.name">wm_qos.correlation_id</stringProp>
+                  <stringProp name="Header.value">FHozS15v413Pj0kgi3XCw1J7QNRaZpWJUnub</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://www.walmart.com/orchestra/cartxo/graphql/DeliveryAddresses/b85ea82c9121b279cff1860a5812230eb15fd2a35aa72c1b1618341dceeebf9b?variables=%7B%22responseGroup%22%3A%22storeDeliverable%22%7D" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="variables" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">variables</stringProp>
+                  <stringProp name="Argument.value">{&quot;responseGroup&quot;:&quot;storeDeliverable&quot;}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">orchestra/cartxo/graphql/DeliveryAddresses/b85ea82c9121b279cff1860a5812230eb15fd2a35aa72c1b1618341dceeebf9b</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="x-o-correlation-id" elementType="Header">
+                  <stringProp name="Header.name">x-o-correlation-id</stringProp>
+                  <stringProp name="Header.value">HRduKx06mLWvFG3uifovcgxw5UXBPt0VpVta</stringProp>
+                </elementProp>
+                <elementProp name="DEVICE_PROFILE_REF_ID" elementType="Header">
+                  <stringProp name="Header.name">DEVICE_PROFILE_REF_ID</stringProp>
+                  <stringProp name="Header.value">0aVxcQKx9tWIDczaeAQNKCQobFrEX58sgI1n</stringProp>
+                </elementProp>
+                <elementProp name="x-latency-trace" elementType="Header">
+                  <stringProp name="Header.name">x-latency-trace</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="WM_MP" elementType="Header">
+                  <stringProp name="Header.name">WM_MP</stringProp>
+                  <stringProp name="Header.value">true</stringProp>
+                </elementProp>
+                <elementProp name="x-o-platform-version" elementType="Header">
+                  <stringProp name="Header.name">x-o-platform-version</stringProp>
+                  <stringProp name="Header.value">main-1.36.0-19e8b5-0108T0618</stringProp>
+                </elementProp>
+                <elementProp name="x-o-gql-query" elementType="Header">
+                  <stringProp name="Header.name">x-o-gql-query</stringProp>
+                  <stringProp name="Header.value">query DeliveryAddresses</stringProp>
+                </elementProp>
+                <elementProp name="x-o-bu" elementType="Header">
+                  <stringProp name="Header.name">x-o-bu</stringProp>
+                  <stringProp name="Header.value">WALMART-US</stringProp>
+                </elementProp>
+                <elementProp name="X-APOLLO-OPERATION-NAME" elementType="Header">
+                  <stringProp name="Header.name">X-APOLLO-OPERATION-NAME</stringProp>
+                  <stringProp name="Header.value">DeliveryAddresses</stringProp>
+                </elementProp>
+                <elementProp name="traceparent" elementType="Header">
+                  <stringProp name="Header.name">traceparent</stringProp>
+                  <stringProp name="Header.value">00-6233410e9c8ff52a80c2c2e9c34bc157-6487021648940a3d-00</stringProp>
+                </elementProp>
+                <elementProp name="x-o-mart" elementType="Header">
+                  <stringProp name="Header.name">x-o-mart</stringProp>
+                  <stringProp name="Header.value">B2C</stringProp>
+                </elementProp>
+                <elementProp name="x-o-platform" elementType="Header">
+                  <stringProp name="Header.name">x-o-platform</stringProp>
+                  <stringProp name="Header.value">rweb</stringProp>
+                </elementProp>
+                <elementProp name="x-o-segment" elementType="Header">
+                  <stringProp name="Header.name">x-o-segment</stringProp>
+                  <stringProp name="Header.value">oaoh</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="accept" elementType="Header">
+                  <stringProp name="Header.name">accept</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="x-enable-server-timing" elementType="Header">
+                  <stringProp name="Header.name">x-enable-server-timing</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="x-o-ccm" elementType="Header">
+                  <stringProp name="Header.name">x-o-ccm</stringProp>
+                  <stringProp name="Header.value">server</stringProp>
+                </elementProp>
+                <elementProp name="wm_qos.correlation_id" elementType="Header">
+                  <stringProp name="Header.name">wm_qos.correlation_id</stringProp>
+                  <stringProp name="Header.value">HRduKx06mLWvFG3uifovcgxw5UXBPt0VpVta</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
